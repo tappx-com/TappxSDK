@@ -29,18 +29,18 @@ extern NSString * const _Nonnull TappxNotificationUIInterfaceOrientationMaskLock
 
 @interface TappxFramework : NSObject
 
-+ (void)addTappxKey:(nonnull NSString *)tappxKey;
-+ (void)addTappxKey:(nonnull NSString *)tappxKey fromNonNative:(nonnull NSString *)platform;
-+ (void)addTappxKey:(nonnull NSString *)tappxKey testMode:(BOOL)test;
++ (void)addTappxKey:(nonnull NSString *)tappxKey NS_SWIFT_NAME(add(tappxKey:));
++ (void)addTappxKey:(nonnull NSString *)tappxKey fromNonNative:(nonnull NSString *)platform NS_SWIFT_NAME(add(tappxKey:fromNative:));
++ (void)addTappxKey:(nonnull NSString *)tappxKey testMode:(BOOL)test NS_SWIFT_NAME(add(tappxKey:testMode:));
 
-+ (void)setEndpoint:(nonnull NSString *)endpoint;
++ (void)setEndpoint:(nonnull NSString *)endpoint NS_SWIFT_NAME(set(endpoint:));
 
-+ (void)acceptPersonalInfoContent:(BOOL)accept;
-+ (void)setGDPRConsent:(nonnull NSString *)consent;
-+ (void)setUsPrivacy:(nonnull NSString *)consent;
-+ (void)setGlobalPrivacyPlatform:(nonnull NSString *)consent;
-+ (void)setCoppaCompliance:(BOOL)coppa;
++ (void)acceptPersonalInfoContent:(BOOL)accept NS_SWIFT_NAME(acceptPersonalInfoContent(accept:));
++ (void)setGDPRConsent:(nonnull NSString *)consent NS_SWIFT_NAME(setGDPRConsent(consent:));
++ (void)setUsPrivacy:(nonnull NSString *)consent NS_SWIFT_NAME(setUsPrivacy(privacy:));
++ (void)setGlobalPrivacyPlatform:(nonnull NSString *)consent NS_SWIFT_NAME(setGlobalPrivacyPlatform(privacy:));
++ (void)setCoppaCompliance:(BOOL)coppa NS_SWIFT_NAME(setCoppaCompliance(compliance:));
 
 + (nonnull NSString *)versionSDK;
-+(UIInterfaceOrientationMask)getUIInterfaceOrientationMaskFrom:(nullable NSNotification *)notification;
++ (UIInterfaceOrientationMask)getUIInterfaceOrientationMaskFrom:(nullable NSNotification *)notification NS_SWIFT_NAME(getUIOrientationMask(from:));
 @end

@@ -10,12 +10,13 @@
 #import <TappxFramework/TappxErrorAd.h>
 @class TappxBannerViewController;
 
+NS_SWIFT_NAME(TappxBannerViewControllerDelegate)
 @protocol TappxBannerViewControllerDelegate <NSObject>
 @required
 - (nonnull UIViewController *)presentViewController;
 @optional
-- (void)tappxBannerViewControllerDidFinishLoad:(nonnull TappxBannerViewController *)vc;
-- (void)tappxBannerViewControllerDidPress:(nonnull TappxBannerViewController *)vc;
-- (void)tappxBannerViewControllerDidFail:(nonnull TappxBannerViewController *)vc withError:(nonnull TappxErrorAd *) error;
-- (void)tappxBannerViewControllerDidClose:(nonnull TappxBannerViewController *)vc;
+- (void)tappxBannerViewControllerDidFinishLoad:(nonnull TappxBannerViewController *)vc NS_SWIFT_NAME(tappxBannerViewControllerDidFinishLoad(viewController:));
+- (void)tappxBannerViewControllerDidPress:(nonnull TappxBannerViewController *)vc NS_SWIFT_NAME(tappxBannerViewControllerDidPress(viewController:));
+- (void)tappxBannerViewControllerDidFail:(nonnull TappxBannerViewController *)vc withError:(nonnull TappxErrorAd *) error NS_SWIFT_NAME(tappxBannerViewControllerDidFail(viewController:error:));
+- (void)tappxBannerViewControllerDidClose:(nonnull TappxBannerViewController *)vc NS_SWIFT_NAME(tappxBannerViewControllerDidClose(viewController:));
 @end

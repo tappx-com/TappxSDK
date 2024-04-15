@@ -8,9 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+NS_SWIFT_NAME(ITPXCrossPromotionAdapterDelegate)
 @protocol ITPXCrossPromotionAdapterDelegate <NSObject>
 @required
--(void) didFailToReceiveAdWithError:(nonnull NSError *)error;
+-(void) didFailToReceiveAdWithError:(nonnull NSError *)error NS_SWIFT_NAME(didFailToReceivedAd(error:));
 -(void) adDidLoad;
 -(void) adDidPress;
 -(void) adDidClose;
