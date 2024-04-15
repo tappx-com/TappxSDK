@@ -55,7 +55,6 @@ Pod::Spec.new do |spec|
   spec.subspec 'TPXCrossPromotionAdapter' do |ss|
     ss.name         = "TPXCrossPromotionAdapter"
     ss.platform = :ios
-    ss.static_framework = true
     ss.ios.deployment_target  = '12.0'
     ss.source_files = 'TPXCrossPromotionAdapter/*.{h,m}'
     ss.dependency "TappxSDK/TappxFramework"
