@@ -1,0 +1,6 @@
+framework module TappxFramework {
+  umbrella header "TappxFramework.h"
+  export *
+
+  module * { export * }
+}
