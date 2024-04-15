@@ -25,6 +25,7 @@ Pod::Spec.new do |spec|
   spec.homepage     = "https://www.tappx.com"
 
   spec.license      = "MIT"
+  spec.static_framework = true
   spec.author = { "Tappx" => "tappx@tappx.com" }
   spec.platform     = :ios, "12.0"
   spec.source       = { :git => "https://github.com/tappx-com/TappxSDK.git", :tag => "#{spec.version}" }
