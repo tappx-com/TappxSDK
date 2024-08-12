@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "TappxSDK"
-  spec.version      = "4.1.7"
+  spec.version      = "4.1.8"
   spec.summary      = "Tappx SDK for iOS monetization."
   
   spec.description  = <<-DESC
