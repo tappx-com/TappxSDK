@@ -9,8 +9,6 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * [EXPERIMENTAL - this API is currently being experimentally tested in integrations; using it will
- * cause all ad sessions using it to be marked as `underEvaluation` until its full release.]
  * Service supporting ad sessions managed (started/finished) via JavaScript Session Client APIs
  * by providing native-layer measurement signals.
  * If the JS Session Client is running in a web view, an instance of this service must be
