@@ -65,4 +65,16 @@ Pod::Spec.new do |spec|
     }
   end
 
+  spec.subspec 'ALTappxMediationAdapter' do |ss|
+    ss.name         = "ALTappxMediationAdapter"
+    ss.platform = :ios
+    ss.ios.deployment_target  = '12.0'
+    ss.source_files = 'ALTappxMediationAdapter/*.{h,m}'
+    ss.dependency "TappxSDK/TappxFramework"
+    ss.dependency "AppLovinSDK", "~> 12.3.0"
+    ss.xcconfig = { 
+      "OTHER_LDFLAGS" => "-ObjC"
+    }
+  end
+
 end
