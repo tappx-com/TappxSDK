@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "TappxSDK"
-  spec.version      = "4.1.15"
+  spec.version      = "4.1.16"
   spec.summary      = "Tappx SDK for iOS monetization."
   
   spec.description  = <<-DESC
@@ -54,7 +54,7 @@ Pod::Spec.new do |spec|
   end
 
   spec.subspec 'TappxGoogleAdsAdapter' do |ss|
-    ss.name         = "TPXCrossPromotionAdapter"
+    ss.name         = "TappxGoogleAdsAdapter"
     ss.platform = :ios
     ss.ios.deployment_target  = '12.0'
     ss.source_files = 'TPXCrossPromotionAdapter/*.{h,m}'
@@ -66,7 +66,7 @@ Pod::Spec.new do |spec|
   end
 
   spec.subspec 'TappxAppLovinAdapter' do |ss|
-    ss.name         = "ALTappxMediationAdapter"
+    ss.name         = "TappxAppLovinAdapter"
     ss.platform = :ios
     ss.ios.deployment_target  = '12.0'
     ss.source_files = 'ALTappxMediationAdapter/*.{h,m}'
