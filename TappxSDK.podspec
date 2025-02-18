@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "TappxSDK"
-  spec.version      = "4.1.18"
+  spec.version      = "4.1.19"
   spec.summary      = "Tappx SDK for iOS monetization."
   
   spec.description  = <<-DESC
@@ -71,7 +71,7 @@ Pod::Spec.new do |spec|
     ss.ios.deployment_target  = '12.0'
     ss.source_files = 'ALTappxMediationAdapter/*.{h,m}'
     ss.dependency "TappxSDK/TappxFramework"
-    ss.dependency "AppLovinSDK", "~> 12.3.0"
+    ss.dependency "AppLovinSDK", "~> 13.1.0"
     ss.xcconfig = { 
       "OTHER_LDFLAGS" => "-ObjC"
     }

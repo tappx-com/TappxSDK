@@ -422,7 +422,6 @@
 
 - (void) tappxRewardedViewControllerVideoCompleted:(nonnull TappxRewardedViewController*) viewController {
     [self.parentAdapter log: @"Rewarded ad video completed"];
-    [self.delegate didCompleteRewardedAdVideo];
 }
 
 - (void) tappxRewardedViewControllerDidAppear:(nonnull TappxRewardedViewController *)viewController {
