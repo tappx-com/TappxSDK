@@ -10,6 +10,7 @@
 #import <TappxFramework/TappxSettings.h>
 #import <TappxFramework/TappxInterstitialViewControllerDelegate.h>
 
+DEPRECATED_MSG_ATTRIBUTE("TappxInterstitialViewController to be removed in future releases, you can use new TappxInterstitialAd")
 NS_SWIFT_NAME(TappxInterstitialViewController)
 @interface TappxInterstitialViewController : NSObject
 

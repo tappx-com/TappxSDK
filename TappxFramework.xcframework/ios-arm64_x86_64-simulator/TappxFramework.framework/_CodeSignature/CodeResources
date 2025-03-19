@@ -10,63 +10,131 @@
 		</data>
 		<key>Headers/ITPXCrossPromotionAdapter.h</key>
 		<data>
-		xV15gTIPhz92INCxZIiLgTa40cU=
+		bx+G6HWDqO1Huwxjs0/wNrL+Pd0=
 		</data>
 		<key>Headers/ITPXCrossPromotionAdapterDelegate.h</key>
 		<data>
-		0oes71JrLhYt8A2wSXakFJiItOE=
+		wQqsQ07MTmv6extPfFPzsujjcBI=
 		</data>
 		<key>Headers/TappxAds.h</key>
 		<data>
-		N5FdKisERUmHV07WaMhgEnCInoQ=
+		d+1CsOg+OekTvQMbaWWfuY8kIag=
+		</data>
+		<key>Headers/TappxBannerView.h</key>
+		<data>
+		JSYmiLF3+PyGfsXUIXxi5McyIQQ=
 		</data>
 		<key>Headers/TappxBannerViewController.h</key>
 		<data>
-		H/MSlpH00acjUbFlRReLhxQY8rg=
+		vVm93hzw8AADN5eo9ReY2UGk+Q4=
 		</data>
 		<key>Headers/TappxBannerViewControllerDelegate.h</key>
 		<data>
-		gprtAc5w96eR5adJfDTZmvOCpVA=
+		xcI+xKrQt89ylUTd1jGudnv80Mc=
+		</data>
+		<key>Headers/TappxBannerViewDelegate.h</key>
+		<data>
+		cQo+0pWse4EwusP5yVSW11Z3JoA=
 		</data>
 		<key>Headers/TappxErrorAd.h</key>
 		<data>
-		z/jQ6EbCkBI6vd59r/Z6GVqizyM=
+		++own7s+4LdoMsyV+j5uhsv/ArY=
+		</data>
+		<key>Headers/TappxFramework-Swift.h</key>
+		<data>
+		GQ0xSU3K2rfFZ24nXp/YsLX4fyY=
 		</data>
 		<key>Headers/TappxFramework.h</key>
 		<data>
-		qSuq3I5a7E+OXomyc684aWUp8c4=
+		XjLCxeRz2mEouZiA/Wz/oVq6El8=
+		</data>
+		<key>Headers/TappxInterstitialAd.h</key>
+		<data>
+		c7HI8z/y4Iyfw5JKt1AWpzgJ4ws=
+		</data>
+		<key>Headers/TappxInterstitialAdDelegate.h</key>
+		<data>
+		LcJ1yu/uBHbz4NFdbJeJngHZGnc=
 		</data>
 		<key>Headers/TappxInterstitialViewController.h</key>
 		<data>
-		zIE4vTOVzRWRUrcd+FbPq4TWNXo=
+		RgdSmE0wk6msnSmrCJXPljXqYOk=
 		</data>
 		<key>Headers/TappxInterstitialViewControllerDelegate.h</key>
 		<data>
-		qIz+x8mxPWvlosoBOtgBhkdldSw=
+		ng6v4XRh7+sXCS9kACTHJSWzzTQ=
+		</data>
+		<key>Headers/TappxRewardedAd.h</key>
+		<data>
+		egmvJIhVmzSSQ8QPv4XyO/pznNE=
+		</data>
+		<key>Headers/TappxRewardedAdDelegate.h</key>
+		<data>
+		ai/mdDQoeX0v8afTlEz2NZ06nVs=
 		</data>
 		<key>Headers/TappxRewardedViewController.h</key>
 		<data>
-		kHGP2yRF7Esx5Do4ue3ZMdpiaJM=
+		SBfraqOYIuKxbbu/1gD5IQ3gdP4=
 		</data>
 		<key>Headers/TappxRewardedViewControllerDelegate.h</key>
 		<data>
-		rpbiQ6s+0+apOEuFTC4OXWrZz+w=
+		AHx4qLjKpfaisWzEx7o/D6Im1I8=
 		</data>
 		<key>Headers/TappxSettings.h</key>
 		<data>
-		gEvhRbYMy3lUK6n7qVOaCNQq0l8=
+		Do6klcyYTjbB906+N5ekaT6GnjI=
 		</data>
 		<key>Headers/TappxVASTURL.h</key>
 		<data>
-		qO9fiJtCQvSZb/KD6IihLmZ0530=
+		h/cZm7roM7bx6TrWhUn27ZhXQkg=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		GwizOJQmd6c9AzqRJkUbB34zFEI=
+		mBRIgLUTaPb0S4JT44FQk9pNyWY=
+		</data>
+		<key>Modules/TappxFramework.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<data>
+		i59mJO1DPb2ZVF/S83NpWO9Blk8=
+		</data>
+		<key>Modules/TappxFramework.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		/y42TWK0onmgJJjGzz+tsNVxdzo=
+		</data>
+		<key>Modules/TappxFramework.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
+		<data>
+		fguDi1IQ7zdgOq/sde+DujR+VKg=
+		</data>
+		<key>Modules/TappxFramework.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
+		<data>
+		/y42TWK0onmgJJjGzz+tsNVxdzo=
+		</data>
+		<key>Modules/TappxFramework.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
+		<data>
+		abbMMoZV4cxHgDmOk9gF8iWC5/g=
+		</data>
+		<key>Modules/TappxFramework.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<data>
+		i59mJO1DPb2ZVF/S83NpWO9Blk8=
+		</data>
+		<key>Modules/TappxFramework.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		lCUDsEW+E4ioNmHwcBgJHk0nI2M=
+		</data>
+		<key>Modules/TappxFramework.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
+		<data>
+		otNF4nyhMx8tEsN+FXWw6+MHilE=
+		</data>
+		<key>Modules/TappxFramework.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
+		<data>
+		lCUDsEW+E4ioNmHwcBgJHk0nI2M=
+		</data>
+		<key>Modules/TappxFramework.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
+		<data>
+		xDsnoUNrfMC6aaCxoBeLC5O/jSk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		JxjKQ4g+dAnxRNWb4+TUXLXCSjA=
+		ANXBwxFrZiz1i4gxR0Ngp5dGsG8=
 		</data>
 		<key>PrivacyInfo.xcprivacy</key>
 		<data>
@@ -82,7 +150,7 @@
 		</data>
 		<key>omsdk-v1.js</key>
 		<data>
-		6+hfCdXnixKm+657WUiXeprAN1c=
+		ooF6nmPFIk7twLDRefviZtdSgKA=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -98,98 +166,217 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FeOopCW/Czta+8u6A9jqDrg1e6ckmDHQ/ereqwSBqzY=
+			VxeW9Mv8uuIfd4UfRbaXwej0qh9FHgF9QvSJkFDRIvM=
 			</data>
 		</dict>
 		<key>Headers/ITPXCrossPromotionAdapterDelegate.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FQe9Ak8GsO7GsWmEZ9Fs+qPXd74BT7WrFWIZCjPljCI=
+			iTqgwel84g3GgkTSrB5POzBnXUsw1M+W0QJ92GOSs+o=
 			</data>
 		</dict>
 		<key>Headers/TappxAds.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YMdnXOZZvRD8FgtPndxK3Lm9SKacLsSdesuqoYIYYxc=
+			9Eb1ktggR1fCTHRXEGWVaZjmjX/nlob6ud030jzbAgQ=
+			</data>
+		</dict>
+		<key>Headers/TappxBannerView.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			tsTyKgoNiqLPMGjuKKP8oncapFvCU6mN9W9WjUfTT2Q=
 			</data>
 		</dict>
 		<key>Headers/TappxBannerViewController.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qTW1m1kKPeh3zRNH4bKcCtSZZQpbsQlDTsCuXtbgL1c=
+			yzvsXB/+jlsXhICmmj4wRYxuo5oogBOz+x3tLnPU99I=
 			</data>
 		</dict>
 		<key>Headers/TappxBannerViewControllerDelegate.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			f0e/SYfQvpQ5cK48dvKC3kGiPE4CqjobCxwxqPyxrxI=
+			YI/301PZl+v61kcvLtujypTbIinrHyp7uPO9lYMtxys=
+			</data>
+		</dict>
+		<key>Headers/TappxBannerViewDelegate.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			aCkcWkGM+8JfBgxweZtHAAzQPpDFfkxHsX0CnqCgkj4=
 			</data>
 		</dict>
 		<key>Headers/TappxErrorAd.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vgRq5NKGw8nz4Kke3d57/Ldl2p/WNXP5CJWE+/ov15Q=
+			bEgBVSkEJLTQde8ECPcCeTUxtNFVczDV1nm45SrECrY=
+			</data>
+		</dict>
+		<key>Headers/TappxFramework-Swift.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			AF4/G9BPx3IRAzH7KUPd1tFjYHsej6NUxrUVUPUi1XM=
 			</data>
 		</dict>
 		<key>Headers/TappxFramework.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fV3WfVVIR/mgrTv1/LC1LX3h2+O9+YnypTZ2u/vL1PM=
+			GjmjRXI43aDGDsGbE2M2/xOKjNV3drHoSUL1mdpOCXQ=
+			</data>
+		</dict>
+		<key>Headers/TappxInterstitialAd.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			oB0NdxiOmRTFVjyCP/godmALux6D6X1QyM68ff8hxUs=
+			</data>
+		</dict>
+		<key>Headers/TappxInterstitialAdDelegate.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			WRY+0RweedueyI3Gj6dviPiFSxo8IkWcTBE3T/7xM+M=
 			</data>
 		</dict>
 		<key>Headers/TappxInterstitialViewController.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5HFb7mKyaeGjA1x7+4QN5GvMZchK9VKjzpemgf+6SvM=
+			OLfb67Seg1KVqFpOek143DnTs48DddQ6dQj/pAyiCCA=
 			</data>
 		</dict>
 		<key>Headers/TappxInterstitialViewControllerDelegate.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7KypYOPnXrSYe1XcVe3fVt62RaiktrzBSo9VbB1rrDE=
+			CNhvF4JtzxNLXBbkkFucgB/ciTJDYqCNsIfiBoI/lus=
+			</data>
+		</dict>
+		<key>Headers/TappxRewardedAd.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6hH++K7Vqn/Q/9fRkrsvlq4+BE8U0N8zbOp+vM63yTE=
+			</data>
+		</dict>
+		<key>Headers/TappxRewardedAdDelegate.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			khb1QHT06CtY84ivZ8X0eawZtjHgc0tTMJTKBaSxaW0=
 			</data>
 		</dict>
 		<key>Headers/TappxRewardedViewController.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Icr/xhSS+MyXj44oeD14IiCNxOhdOT9O+lFGO9lvE2c=
+			UaJqWFzgI0smUU/IkZ7Jr4jkEQ1XigdOAF2po9pI97I=
 			</data>
 		</dict>
 		<key>Headers/TappxRewardedViewControllerDelegate.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HkySCNIThU7PyjYjcunwQT8Z8mjFxPEXhXsWF5W5aWE=
+			MHTqhAsgdPCnCAYztk4RzLlUVZoIdstZ11+8NAFdG1w=
 			</data>
 		</dict>
 		<key>Headers/TappxSettings.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			30o8A/huPTcKQ8RCcdexcNV3rV3vTBC95y/DKCI9RD0=
+			Or9/cDW5wpx79zFcHMmyavyw9Nu9nwqJbbfVFDWAASA=
 			</data>
 		</dict>
 		<key>Headers/TappxVASTURL.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lLNDlUCOFgHI9opg+Hn3ZzEv3vrmFh8Gb6zjdMmGCZ8=
+			zZCNb0Ty5s5LASAaGJmv/crpR1EqalHAOA3m2kYTF3s=
+			</data>
+		</dict>
+		<key>Modules/TappxFramework.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			IIHeqbXOUDdMfZ6LZoeF151XdDbVGmDmRTJgo7zr5oE=
+			</data>
+		</dict>
+		<key>Modules/TappxFramework.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			IT/nAQZnNG+MakcjcNE3ZQ8Xnnnz59SbT3pM7E31bSc=
+			</data>
+		</dict>
+		<key>Modules/TappxFramework.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ibeGf1+rvm5SC7gCC4H1672cimdA7T7xeXT9EcZqtIM=
+			</data>
+		</dict>
+		<key>Modules/TappxFramework.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			IT/nAQZnNG+MakcjcNE3ZQ8Xnnnz59SbT3pM7E31bSc=
+			</data>
+		</dict>
+		<key>Modules/TappxFramework.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			4Kdp6CXYirmf1JsDTBCcIwyr7WLMhsaPZKuW/SBJPi0=
+			</data>
+		</dict>
+		<key>Modules/TappxFramework.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			IIHeqbXOUDdMfZ6LZoeF151XdDbVGmDmRTJgo7zr5oE=
+			</data>
+		</dict>
+		<key>Modules/TappxFramework.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			yhYtdtFLKcFhfBTTkgA5TkmhJKrLVxs2FlIB6GnUQ+M=
+			</data>
+		</dict>
+		<key>Modules/TappxFramework.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			pK0p/MUIuBUxCl8LVsv09yHIXZGrOZeek17T7tOLY1A=
+			</data>
+		</dict>
+		<key>Modules/TappxFramework.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			yhYtdtFLKcFhfBTTkgA5TkmhJKrLVxs2FlIB6GnUQ+M=
+			</data>
+		</dict>
+		<key>Modules/TappxFramework.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ugMxM7CPe36ZROUqUs9Mrwc8Un7v7C5WUBHfsnSjV+0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bf6pw53kbkyPrnhxPZacIis3UEZ6Df0A9rcPksAdkNs=
+			nsp9ApWoxv7Tfqjmf/ftuOwaVegSGMPsXgpfKG994k0=
 			</data>
 		</dict>
 		<key>PrivacyInfo.xcprivacy</key>
@@ -217,7 +404,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wdHo+ZxIr5eFSs8kgj8Q2jorPZzSti3/PJO59hk3RRw=
+			S+wmvZJLmAIoXg3ROfHt+QiEN1FykFILzjidhjY2XSA=
 			</data>
 		</dict>
 	</dict>

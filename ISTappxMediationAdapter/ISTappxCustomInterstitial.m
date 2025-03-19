@@ -8,22 +8,12 @@
 
 @interface ISTappxCustomInterstitial ()
 
-@property (strong, nonatomic) TappxInterstitialViewController* interstitialAd;
+@property (strong, nonatomic) TappxInterstitialAd* interstitialAd;
 @property (strong, nonatomic) id<ISInterstitialAdDelegate> adDelegate;
 
 @end
 
 @implementation ISTappxCustomInterstitial
-
-static UIViewController* rootVC;
-
-+ (UIViewController *) _getRootVC {
-    return rootVC;
-}
-
-+ (void) _setRootVC:(UIViewController *) vc {
-    rootVC = vc;
-}
 
 typedef NS_ENUM (NSInteger) {
     IS_NO_FILL = 0,
@@ -54,9 +44,8 @@ typedef NS_ENUM (NSInteger) {
     _adDelegate = delegate;
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        self->_interstitialAd = [[TappxInterstitialViewController alloc] initWithDelegate:self];
+        self->_interstitialAd = [[TappxInterstitialAd alloc] initWithDelegate:self];
         [self->_interstitialAd load];
-        
     });
 }
 
@@ -71,11 +60,9 @@ typedef NS_ENUM (NSInteger) {
 - (void)showAdWithViewController:(nonnull UIViewController *)viewController
                           adData:(nonnull ISAdData *)adData
                         delegate:(nonnull id<ISInterstitialAdDelegate>)delegate {
-    [ISTappxCustomInterstitial _setRootVC:viewController];
-    
     if([_interstitialAd isReady]) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            [_interstitialAd show];
+            [self->_interstitialAd showFrom:viewController];
         });
         _adDelegate = delegate;
         return;
@@ -83,35 +70,28 @@ typedef NS_ENUM (NSInteger) {
     [self descriptionError:IS_NO_FILL andDescription: @"interstitial ad not ready"];
    
 }
-- (void)present:(nonnull UIViewController *)viewController {
-    [[ISTappxCustomInterstitial _getRootVC] presentViewController:viewController animated:false completion:nil];
-}
 
-- (nonnull UIViewController*)presentViewController{
-    return [ISTappxCustomInterstitial _getRootVC];
-}
-
-- (void)onTappxInterstitialDismissed:(nonnull TappxInterstitialViewController *)interstitial {
+- (void)tappxInterstitialAdDismissed:(nonnull TappxInterstitialAd *)interstitialAd {
     [_adDelegate adDidEnd];
 }
 
-- (void)tappxInterstitialViewControllerDidFinishLoad:(nonnull TappxInterstitialViewController *)viewController {
+- (void)tappxInterstitialAdDidFinishLoad:(nonnull TappxInterstitialAd *)interstitialAd {
     [_adDelegate adDidLoad];
 }
 
-- (void)tappxInterstitialViewControllerDidPress:(nonnull TappxInterstitialViewController *)viewController {
+- (void)tappxInterstitialAdDidPress:(nonnull TappxInterstitialAd *)interstitialAd {
     [_adDelegate adDidClick];
 }
 
-- (void)tappxInterstitialViewControllerDidClose:(nonnull TappxInterstitialViewController *)viewController {
+- (void)tappxInterstitialAdDidClose:(nonnull TappxInterstitialAd *)interstitialAd {
     [_adDelegate adDidClose];
 }
 
-- (void)tappxInterstitialViewControllerDidFail:(nonnull TappxInterstitialViewController *)viewController withError:(nonnull TappxErrorAd *)error {
+- (void)tappxInterstitialAdDidFail:(nonnull TappxInterstitialAd *)interstitialAd withError:(nonnull TappxErrorAd *)error {
     [self descriptionError:error.code andDescription:error.localizedDescription];
 }
 
-- (void)tappxInterstitialViewControllerDidAppear:(nonnull TappxInterstitialViewController *)viewController {
+- (void)tappxInterstitialAdDidAppear:(nonnull TappxInterstitialAd *)interstitialAd {
     [_adDelegate adDidOpen];
 }
 

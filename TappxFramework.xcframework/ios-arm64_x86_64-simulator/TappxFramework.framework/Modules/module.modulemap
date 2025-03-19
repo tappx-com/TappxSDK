@@ -4,3 +4,8 @@ framework module TappxFramework {
 
   module * { export * }
 }
+
+module TappxFramework.Swift {
+  header "TappxFramework-Swift.h"
+  requires objc
+}

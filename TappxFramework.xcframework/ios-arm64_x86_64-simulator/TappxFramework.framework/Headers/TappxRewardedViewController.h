@@ -10,6 +10,7 @@
 #import <TappxFramework/TappxSettings.h>
 #import <TappxFramework/TappxRewardedViewControllerDelegate.h>
 
+DEPRECATED_MSG_ATTRIBUTE("TappxRewardedViewController to be removed in future releases, you can use new TappxRewardedAd")
 NS_SWIFT_NAME(TappxRewardedViewController)
 @interface TappxRewardedViewController : NSObject
 - (nonnull instancetype)initWithDelegate:(nonnull id<TappxRewardedViewControllerDelegate>)delegate NS_SWIFT_NAME(init(delegate:));

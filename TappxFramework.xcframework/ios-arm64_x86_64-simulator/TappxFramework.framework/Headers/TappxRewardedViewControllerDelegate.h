@@ -10,6 +10,7 @@
 #import <TappxFramework/TappxErrorAd.h>
 @class TappxRewardedViewController;
 
+DEPRECATED_MSG_ATTRIBUTE("TappxRewardedViewControllerDelegate to be removed in future releases, you can use new TappxRewardedAdDelegate")
 NS_SWIFT_NAME(TappxRewardedViewControllerDelegate)
 @protocol TappxRewardedViewControllerDelegate <NSObject>
 @required

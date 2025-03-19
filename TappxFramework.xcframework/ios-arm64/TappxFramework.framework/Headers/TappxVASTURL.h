@@ -55,7 +55,7 @@ NS_SWIFT_NAME(TappxVASTURL)
                         applicationName:(nonnull NSString *)applicationName
                     applicationStoreURL:(nonnull NSString *)applicationStoreURL NS_SWIFT_NAME(init(host:key:videoPosition:width:height:applicationName:applicationStoreUrl:));
                               
-- (void)setGDPROptin:(BOOL)gdprOptin;
+- (void)setGDPROptin:(BOOL)gdprOptin NS_SWIFT_NAME(setGDPROptin(gdprOptin:));
 - (void)setMinDurationVideoSeconds:(nullable NSNumber *)minDurationVideoSeconds NS_SWIFT_NAME(setMinDurationVideo(seconds:));
 - (void)setMaxDurationVideoSeconds:(nullable NSNumber *)maxDurationVideoSeconds NS_SWIFT_NAME(setMaxDurationVideo(seconds:));
 /**
@@ -95,7 +95,7 @@ Eg: @[@(TappxVASTVersionV2), @(TappxVASTVersionV3)]
 #pragma mark - Build URL
 
 - (void)URL:(void (^_Nonnull)(NSURL* _Nullable url))completion NS_SWIFT_NAME(url(completion:));
-- (nullable NSString *)stringURL;
+- (nullable NSString *)stringURL NS_SWIFT_NAME(stringURL());
 
 @end
 

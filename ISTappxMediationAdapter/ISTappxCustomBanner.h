@@ -8,6 +8,6 @@
 #import <TappxFramework/TappxAds.h>
 #import "IronSource/IronSource.h"
 
-@interface ISTappxCustomBanner : ISBaseBanner<TappxBannerViewControllerDelegate>
+@interface ISTappxCustomBanner : ISBaseBanner<TappxBannerViewDelegate>
 @end
 

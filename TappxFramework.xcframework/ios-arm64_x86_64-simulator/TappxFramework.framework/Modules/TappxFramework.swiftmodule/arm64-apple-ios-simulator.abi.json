@@ -1,0 +1,590 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TappxFramework",
+    "printedName": "TappxFramework",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "TappxFramework",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UITappxBannerView",
+        "printedName": "UITappxBannerView",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(tappxKey:extraTappxKey:size:animation:onEvent:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UITappxBannerView",
+                "printedName": "TappxFramework.UITappxBannerView",
+                "usr": "s:14TappxFramework17UITappxBannerViewV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TappxBannerSize",
+                "printedName": "TappxFramework.TappxBannerSize",
+                "usr": "c:@E@TappxBannerSize"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TappxAnimation",
+                "printedName": "TappxFramework.TappxAnimation",
+                "usr": "c:@E@TappxAnimation"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((TappxFramework.TappxBannerEvent) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(TappxFramework.TappxBannerEvent) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TappxBannerEvent",
+                        "printedName": "TappxFramework.TappxBannerEvent",
+                        "usr": "s:14TappxFramework0A11BannerEventO"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14TappxFramework17UITappxBannerViewV8tappxKey05extraaG04size9animation7onEventACSSSg_AISo0aD4SizeVSo0A9AnimationVyAA0adL0OcSgtcfc",
+            "mangledName": "$s14TappxFramework17UITappxBannerViewV8tappxKey05extraaG04size9animation7onEventACSSSg_AISo0aD4SizeVSo0A9AnimationVyAA0adL0OcSgtcfc",
+            "moduleName": "TappxFramework",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "body",
+            "printedName": "body",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14TappxFramework17UITappxBannerViewV4bodyQrvp",
+            "mangledName": "$s14TappxFramework17UITappxBannerViewV4bodyQrvp",
+            "moduleName": "TappxFramework",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14TappxFramework17UITappxBannerViewV4bodyQrvg",
+                "mangledName": "$s14TappxFramework17UITappxBannerViewV4bodyQrvg",
+                "moduleName": "TappxFramework",
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:14TappxFramework17UITappxBannerViewV",
+        "mangledName": "$s14TappxFramework17UITappxBannerViewV",
+        "moduleName": "TappxFramework",
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom",
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "View",
+            "printedName": "View",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI4ViewP",
+            "mangledName": "$s7SwiftUI4ViewP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "TappxFramework",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "TappxFramework"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TappxBannerEvent",
+        "printedName": "TappxBannerEvent",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "didClose",
+            "printedName": "didClose",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TappxFramework.TappxBannerEvent.Type) -> (TappxFramework.TappxBannerView) -> TappxFramework.TappxBannerEvent",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(TappxFramework.TappxBannerView) -> TappxFramework.TappxBannerEvent",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TappxBannerEvent",
+                        "printedName": "TappxFramework.TappxBannerEvent",
+                        "usr": "s:14TappxFramework0A11BannerEventO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(bannerView: TappxFramework.TappxBannerView)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "TappxBannerView",
+                            "printedName": "TappxFramework.TappxBannerView",
+                            "usr": "c:objc(cs)TappxBannerView"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TappxFramework.TappxBannerEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TappxBannerEvent",
+                        "printedName": "TappxFramework.TappxBannerEvent",
+                        "usr": "s:14TappxFramework0A11BannerEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14TappxFramework0A11BannerEventO8didCloseyACSo0aC4ViewC_tcACmF",
+            "mangledName": "$s14TappxFramework0A11BannerEventO8didCloseyACSo0aC4ViewC_tcACmF",
+            "moduleName": "TappxFramework",
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "didPress",
+            "printedName": "didPress",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TappxFramework.TappxBannerEvent.Type) -> (TappxFramework.TappxBannerView) -> TappxFramework.TappxBannerEvent",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(TappxFramework.TappxBannerView) -> TappxFramework.TappxBannerEvent",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TappxBannerEvent",
+                        "printedName": "TappxFramework.TappxBannerEvent",
+                        "usr": "s:14TappxFramework0A11BannerEventO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(bannerView: TappxFramework.TappxBannerView)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "TappxBannerView",
+                            "printedName": "TappxFramework.TappxBannerView",
+                            "usr": "c:objc(cs)TappxBannerView"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TappxFramework.TappxBannerEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TappxBannerEvent",
+                        "printedName": "TappxFramework.TappxBannerEvent",
+                        "usr": "s:14TappxFramework0A11BannerEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14TappxFramework0A11BannerEventO8didPressyACSo0aC4ViewC_tcACmF",
+            "mangledName": "$s14TappxFramework0A11BannerEventO8didPressyACSo0aC4ViewC_tcACmF",
+            "moduleName": "TappxFramework",
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "didFinishLoad",
+            "printedName": "didFinishLoad",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TappxFramework.TappxBannerEvent.Type) -> (TappxFramework.TappxBannerView) -> TappxFramework.TappxBannerEvent",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(TappxFramework.TappxBannerView) -> TappxFramework.TappxBannerEvent",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TappxBannerEvent",
+                        "printedName": "TappxFramework.TappxBannerEvent",
+                        "usr": "s:14TappxFramework0A11BannerEventO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(bannerView: TappxFramework.TappxBannerView)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "TappxBannerView",
+                            "printedName": "TappxFramework.TappxBannerView",
+                            "usr": "c:objc(cs)TappxBannerView"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TappxFramework.TappxBannerEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TappxBannerEvent",
+                        "printedName": "TappxFramework.TappxBannerEvent",
+                        "usr": "s:14TappxFramework0A11BannerEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14TappxFramework0A11BannerEventO13didFinishLoadyACSo0aC4ViewC_tcACmF",
+            "mangledName": "$s14TappxFramework0A11BannerEventO13didFinishLoadyACSo0aC4ViewC_tcACmF",
+            "moduleName": "TappxFramework",
+            "fixedbinaryorder": 2
+          },
+          {
+            "kind": "Var",
+            "name": "didFail",
+            "printedName": "didFail",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TappxFramework.TappxBannerEvent.Type) -> (TappxFramework.TappxBannerView, TappxFramework.TappxErrorAd) -> TappxFramework.TappxBannerEvent",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(TappxFramework.TappxBannerView, TappxFramework.TappxErrorAd) -> TappxFramework.TappxBannerEvent",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TappxBannerEvent",
+                        "printedName": "TappxFramework.TappxBannerEvent",
+                        "usr": "s:14TappxFramework0A11BannerEventO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(bannerView: TappxFramework.TappxBannerView, error: TappxFramework.TappxErrorAd)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "TappxBannerView",
+                            "printedName": "TappxFramework.TappxBannerView",
+                            "usr": "c:objc(cs)TappxBannerView"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "TappxErrorAd",
+                            "printedName": "TappxFramework.TappxErrorAd",
+                            "usr": "c:objc(cs)TappxErrorAd"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TappxFramework.TappxBannerEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TappxBannerEvent",
+                        "printedName": "TappxFramework.TappxBannerEvent",
+                        "usr": "s:14TappxFramework0A11BannerEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14TappxFramework0A11BannerEventO7didFailyACSo0aC4ViewC_So0A7ErrorAdCtcACmF",
+            "mangledName": "$s14TappxFramework0A11BannerEventO7didFailyACSo0aC4ViewC_So0A7ErrorAdCtcACmF",
+            "moduleName": "TappxFramework",
+            "fixedbinaryorder": 3
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:14TappxFramework0A11BannerEventO",
+        "mangledName": "$s14TappxFramework0A11BannerEventO",
+        "moduleName": "TappxFramework",
+        "declAttributes": [
+          "AccessControl",
+          "Frozen"
+        ],
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TappxFramework"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "TappxFramework"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "TappxFramework"
+      },
+      {
+        "kind": "Import",
+        "name": "DeveloperToolsSupport",
+        "printedName": "DeveloperToolsSupport",
+        "declKind": "Import",
+        "moduleName": "TappxFramework"
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/antoniolai\/Library\/Developer\/Xcode\/DerivedData\/TappxFramework-feugdaohzeiqtydrejnnfquromtt\/Build\/Intermediates.noindex\/ArchiveIntermediates\/TappxFramework\/IntermediateBuildFilesPath\/TappxFramework.build\/Release-iphonesimulator\/TappxFramework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 736,
+      "length": 14,
+      "value": "\"player.close\""
+    },
+    {
+      "filePath": "\/Users\/antoniolai\/Library\/Developer\/Xcode\/DerivedData\/TappxFramework-feugdaohzeiqtydrejnnfquromtt\/Build\/Intermediates.noindex\/ArchiveIntermediates\/TappxFramework\/IntermediateBuildFilesPath\/TappxFramework.build\/Release-iphonesimulator\/TappxFramework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 881,
+      "length": 13,
+      "value": "\"player.skip\""
+    },
+    {
+      "filePath": "\/Users\/antoniolai\/Library\/Developer\/Xcode\/DerivedData\/TappxFramework-feugdaohzeiqtydrejnnfquromtt\/Build\/Intermediates.noindex\/ArchiveIntermediates\/TappxFramework\/IntermediateBuildFilesPath\/TappxFramework.build\/Release-iphonesimulator\/TappxFramework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1029,
+      "length": 15,
+      "value": "\"speaker.slash\""
+    },
+    {
+      "filePath": "\/Users\/antoniolai\/Library\/Developer\/Xcode\/DerivedData\/TappxFramework-feugdaohzeiqtydrejnnfquromtt\/Build\/Intermediates.noindex\/ArchiveIntermediates\/TappxFramework\/IntermediateBuildFilesPath\/TappxFramework.build\/Release-iphonesimulator\/TappxFramework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1177,
+      "length": 14,
+      "value": "\"speaker.wave\""
+    }
+  ]
+}

@@ -11,8 +11,26 @@
 NS_SWIFT_NAME(ITPXCrossPromotionAdapterDelegate)
 @protocol ITPXCrossPromotionAdapterDelegate <NSObject>
 @required
+
+/**
+ Called when an error occurs while receiving an ad.
+
+ @param error The error that occurred while attempting to load the ad.
+ */
 -(void) didFailToReceiveAdWithError:(nonnull NSError *)error NS_SWIFT_NAME(didFailToReceivedAd(error:));
--(void) adDidLoad;
--(void) adDidPress;
--(void) adDidClose;
+
+/**
+ Called when the ad finishes loading successfully.
+ */
+-(void) adDidLoad NS_SWIFT_NAME(adDidLoad());
+
+/**
+ Called when the ad is pressed.
+ */
+-(void) adDidPress NS_SWIFT_NAME(adDidPress());
+
+/**
+ Called when the ad is closed.
+ */
+-(void) adDidClose NS_SWIFT_NAME(adDidClose());
 @end

@@ -8,7 +8,7 @@
 
 @interface ISTappxCustomRewardedVideo ()
 
-@property (strong, nonatomic) TappxRewardedViewController* rewardedVideoAd;
+@property (strong, nonatomic) TappxRewardedAd* rewardedVideoAd;
 @property (strong, nonatomic) id<ISRewardedVideoAdDelegate> adDelegate;
 
 @property (strong, nonatomic) void (^completionHandler)(ISAdData* ad, ISAdapterErrors error);
@@ -16,16 +16,6 @@
 @end
 
 @implementation ISTappxCustomRewardedVideo
-
-static UIViewController* rootVC;
-
-+ (UIViewController *) _getRootVC {
-    return rootVC;
-}
-
-+ (void) _setRootVC:(UIViewController *) vc {
-    rootVC = vc;
-}
 
 typedef NS_ENUM (NSInteger) {
     IS_NO_FILL = 0,
@@ -57,7 +47,7 @@ typedef NS_ENUM (NSInteger) {
     _adDelegate = delegate;
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        self->_rewardedVideoAd = [[TappxRewardedViewController alloc] initWithDelegate:self];
+        self->_rewardedVideoAd = [[TappxRewardedAd alloc] initWithDelegate:self];
         [self->_rewardedVideoAd load];
     });
 }
@@ -72,11 +62,9 @@ typedef NS_ENUM (NSInteger) {
 }
 
 - (void)showAdWithViewController:(UIViewController *)viewController adData:(ISAdData *)adData delegate:(id<ISRewardedVideoAdDelegate>)delegate {
-    [ISTappxCustomRewardedVideo _setRootVC:viewController];
-    
     if([_rewardedVideoAd isReady]) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            [_rewardedVideoAd show];
+            [self->_rewardedVideoAd showFrom:viewController];
         });
         _adDelegate = delegate;
         return;
@@ -85,45 +73,37 @@ typedef NS_ENUM (NSInteger) {
     [self descriptionError:IS_NO_FILL andDescription:@"RewardedAd not ready"];
 }
 
-- (void)present:(nonnull UIViewController *)viewController {
-    [[ISTappxCustomRewardedVideo _getRootVC] presentViewController:viewController animated:false completion:nil];
-}
-
-- (nonnull UIViewController *)presentViewController {
-    return [ISTappxCustomRewardedVideo _getRootVC];
-}
-
-- (void)tappxRewardedViewControllerDidFinishLoad:(nonnull TappxRewardedViewController *)viewController {
+- (void)tappxRewardedAdDidFinishLoad:(nonnull TappxRewardedAd *)rewardedAd {
     [_adDelegate adDidLoad];
 }
 
-- (void)tappxRewardedViewControllerDidFail:(nonnull TappxRewardedViewController *)viewController withError:(nonnull TappxErrorAd *)error {
+- (void)tappxRewardedAdDidFail:(nonnull TappxRewardedAd *)rewardedAd withError:(nonnull TappxErrorAd *)error {
     [_adDelegate adDidFailToShowWithErrorCode:error.code errorMessage:error.localizedDescription];
 }
 
-- (void) tappxRewardedViewControllerClicked:(nonnull TappxRewardedViewController*) viewController {
+- (void) tappxRewardedAdClicked:(nonnull TappxRewardedAd*) rewardedAd {
     [_adDelegate adDidClick];
 }
 
-- (void) tappxRewardedViewControllerPlaybackFailed:(nonnull TappxRewardedViewController*) viewController {
+- (void) tappxRewardedAdPlaybackFailed:(nonnull TappxRewardedAd*) rewardedAd {
     [_adDelegate adDidFailToShowWithErrorCode:IS_NO_FILL errorMessage:@"RewardedAd playback failed"];
 }
 
-- (void) tappxRewardedViewControllerVideoClosed:(nonnull TappxRewardedViewController*) viewController {
+- (void) tappxRewardedAdVideoClosed:(nonnull TappxRewardedAd*) rewardedAd {
     [_adDelegate adDidClose];
 }
 
-- (void) tappxRewardedViewControllerVideoCompleted:(nonnull TappxRewardedViewController*) viewController { }
+- (void) tappxRewardedAdVideoCompleted:(nonnull TappxRewardedAd*) rewardedAd { }
 
-- (void)tappxRewardedViewControllerDidAppear:(nonnull TappxRewardedViewController *)viewController {
+- (void)tappxRewardedAdDidAppear:(nonnull TappxRewardedAd *)rewardedAd {
     [_adDelegate adDidOpen];
 }
 
-- (void)onTappxRewardedViewControllerDismissed:(nonnull TappxRewardedViewController *)RewardedVideo {
+- (void)onTappxRewardedAdDismissed:(nonnull TappxRewardedAd *) rewardedAd {
     [_adDelegate adDidEnd];
 }
 
-- (void) tappxRewardedViewControllerUserDidEarnReward:(nonnull TappxRewardedViewController*) viewController {
+- (void) tappxRewardedAdUserDidEarnReward:(nonnull TappxRewardedAd*) rewardedAd {
     [_adDelegate adRewarded];
 }
 

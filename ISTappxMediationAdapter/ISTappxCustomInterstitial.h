@@ -8,6 +8,6 @@
 #import <TappxFramework/TappxAds.h>
 #import "IronSource/IronSource.h"
 
-@interface ISTappxCustomInterstitial : ISBaseInterstitial<TappxInterstitialViewControllerDelegate>
+@interface ISTappxCustomInterstitial : ISBaseInterstitial<TappxInterstitialAdDelegate>
 @end
 

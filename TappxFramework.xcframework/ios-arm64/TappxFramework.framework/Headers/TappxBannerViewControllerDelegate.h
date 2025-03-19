@@ -10,6 +10,7 @@
 #import <TappxFramework/TappxErrorAd.h>
 @class TappxBannerViewController;
 
+DEPRECATED_MSG_ATTRIBUTE("TappxBannerViewControllerDelegate to be removed in future releases, you can use new TappxBannerViewDelegate")
 NS_SWIFT_NAME(TappxBannerViewControllerDelegate)
 @protocol TappxBannerViewControllerDelegate <NSObject>
 @required

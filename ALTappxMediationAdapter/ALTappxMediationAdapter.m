@@ -14,7 +14,7 @@
 /**
  * Interstitial Delegate
  */
-@interface AppLovinTappxRewardedDelegate : NSObject<TappxRewardedViewControllerDelegate>
+@interface AppLovinTappxRewardedDelegate : NSObject<TappxRewardedAdDelegate>
 @property (nonatomic,   weak) ALTappxMediationAdapter *parentAdapter;
 @property (nonatomic, strong) id<MARewardedAdapterDelegate> delegate;
 - (instancetype)initWithParentAdapter:(ALTappxMediationAdapter *)parentAdapter andNotify:(id<MARewardedAdapterDelegate>)delegate;
@@ -23,7 +23,7 @@
 /**
  * Interstitial Delegate
  */
-@interface AppLovinTappxInterstitialDelegate : NSObject<TappxInterstitialViewControllerDelegate>
+@interface AppLovinTappxInterstitialDelegate : NSObject<TappxInterstitialAdDelegate>
 @property (nonatomic,   weak) ALTappxMediationAdapter *parentAdapter;
 @property (nonatomic, strong) id<MAInterstitialAdapterDelegate> delegate;
 - (instancetype)initWithParentAdapter:(ALTappxMediationAdapter *)parentAdapter andNotify:(id<MAInterstitialAdapterDelegate>)delegate;
@@ -32,7 +32,7 @@
 /**
  * AdView Delegate
  */
-@interface AppLovinTappxAdViewDelegate : NSObject<TappxBannerViewControllerDelegate>
+@interface AppLovinTappxAdViewDelegate : NSObject<TappxBannerViewDelegate>
 @property (nonatomic,   weak) ALTappxMediationAdapter *parentAdapter;
 @property (nonatomic, strong) id<MAAdViewAdapterDelegate> delegate;
 - (instancetype)initWithParentAdapter:(ALTappxMediationAdapter *)parentAdapter andNotify:(id<MAAdViewAdapterDelegate>)delegate;
@@ -41,19 +41,16 @@
 @interface ALTappxMediationAdapter()
 
 // Interstitial Properties
-@property (nonatomic, strong) TappxInterstitialViewController *interstitialAd;
+@property (nonatomic, strong) TappxInterstitialAd *interstitialAd;
 @property (nonatomic, strong) AppLovinTappxInterstitialDelegate *interstitialAdDelegate;
 
 // Rewarded Properties
-@property (nonatomic, strong) TappxRewardedViewController *rewardedAd;
+@property (nonatomic, strong) TappxRewardedAd *rewardedAd;
 @property (nonatomic, strong) AppLovinTappxRewardedDelegate *rewardedAdDelegate;
 
 // AdView Properties
-@property (nonatomic, strong) TappxBannerViewController *adView;
+@property (nonatomic, strong) TappxBannerView *adView;
 @property (nonatomic, strong) AppLovinTappxAdViewDelegate *adViewAdDelegate;
-@property (nonatomic, strong) UIView *adViewContainer;
-
-@property (nonatomic, weak) UIViewController *presentingViewController;
 
 @end
 
@@ -68,18 +65,14 @@
     NSString *appKey = [parameters.serverParameters al_stringForKey: @"app_id"];
     NSDictionary *customParameters = parameters.customParameters;
 
-    if ( [parameters isTesting] || [customParameters al_boolForKey: @"is_testing"] || [customParameters al_boolForKey: @"test" ] )
-    {
+    if ( [parameters isTesting] || [customParameters al_boolForKey: @"is_testing"] || [customParameters al_boolForKey: @"test" ] ) {
         [TappxFramework addTappxKey: appKey testMode: YES];
-    }
-    else
-    {
-        //[TappxFramework addTappxKey: appKey fromNonNative: @"applovin"];
+    } else {
+        [TappxFramework addTappxKey: appKey fromNonNative: @"applovin"];
     }
     
     NSString *endpoint = [parameters.serverParameters al_stringForKey: @"endpoint"];
-    if ( [endpoint al_isValidString] )
-    {
+    if ( [endpoint al_isValidString] ) {
         [TappxFramework setEndpoint: endpoint];
     }
     
@@ -105,7 +98,6 @@
     
     [self.adView removeBanner];
     self.adView = nil;
-    self.adViewContainer = nil;
     self.adViewAdDelegate = nil;
 }
 
@@ -121,7 +113,7 @@
     }
     else
     {
-        [TappxFramework addTappxKey: appKey fromNonNative: @"applovin"];
+        [TappxFramework addTappxKey: appKey fromNonNative:@"applovin"];
     }
     
     NSString *endpoint = [parameters.serverParameters al_stringForKey: @"endpoint"];
@@ -140,10 +132,10 @@
 {
     [self log: @"Loading interstitial ad..."];
     
-    self.interstitialAdDelegate = [[AppLovinTappxInterstitialDelegate alloc] initWithParentAdapter: self andNotify: delegate];
-    self.interstitialAd = [[TappxInterstitialViewController alloc] initWithDelegate: self.interstitialAdDelegate];
+    self.interstitialAdDelegate = [[AppLovinTappxInterstitialDelegate alloc] initWithParentAdapter:self andNotify:delegate];
+    self.interstitialAd = [[TappxInterstitialAd alloc] initWithDelegate: self.interstitialAdDelegate];
     
-    [self.interstitialAd setAutoShowWhenReady: NO];
+    [self.interstitialAd setAutoShowWhenReady:NO];
     [self.interstitialAd load];
 }
 
@@ -153,12 +145,13 @@
     
     if ( [self.interstitialAd isReady] )
     {
-        if ( ALSdk.versionCode >= 11020199 )
+        UIViewController* viewController;
+        if (ALSdk.versionCode >= 11020199)
         {
-            self.presentingViewController = parameters.presentingViewController;
+            viewController = parameters.presentingViewController;
         }
         
-        [self.interstitialAd show];
+        [self.interstitialAd showFrom:viewController ?: [ALUtils topViewControllerFromKeyWindow]];
     }
     else
     {
@@ -173,12 +166,17 @@
 {
     [self log: @"Loading %@ ad view ad...", adFormat.label];
     
-    self.adViewAdDelegate = [[AppLovinTappxAdViewDelegate alloc] initWithParentAdapter: self andNotify: delegate];
+    self.adViewAdDelegate = [[AppLovinTappxAdViewDelegate alloc] initWithParentAdapter:self andNotify: delegate];
     
-    self.adViewContainer = [[UIView alloc] init];
-    self.adView = [[TappxBannerViewController alloc] initWithDelegate : self.adViewAdDelegate
-                                                              andSize : [self sizeFromAdFormat: adFormat]
-                                                              andView : self.adViewContainer];
+    self.adView = [[TappxBannerView alloc] initWithDelegate : self.adViewAdDelegate
+                                                    andSize : [self sizeFromAdFormat: adFormat]];
+    
+    UIViewController* viewController;
+    if ( ALSdk.versionCode >= 11020199 ) {
+        viewController = parameters.presentingViewController;
+    }
+    
+    [self.adView setRootViewController:viewController ?: [ALUtils topViewControllerFromKeyWindow]];
     [self.adView load];
 }
 
@@ -188,9 +186,9 @@
     [self log: @"Loading rewarded ad..."];
     
     self.rewardedAdDelegate = [[AppLovinTappxRewardedDelegate alloc] initWithParentAdapter: self andNotify: delegate];
-    self.rewardedAd = [[TappxRewardedViewController alloc] initWithDelegate: self.rewardedAdDelegate];
+    self.rewardedAd = [[TappxRewardedAd alloc] initWithDelegate:self.rewardedAdDelegate];
     
-    [self.rewardedAd setAutoShowWhenReady: NO];
+    [self.rewardedAd setAutoShowWhenReady:NO];
     [self.rewardedAd load];
 }
 
@@ -199,12 +197,13 @@
     
     if ( [self.rewardedAd isReady] )
     {
+        UIViewController* viewController;
         if ( ALSdk.versionCode >= 11020199 )
         {
-            self.presentingViewController = parameters.presentingViewController;
+            viewController = parameters.presentingViewController;
         }
         
-        [self.rewardedAd show];
+        [self.rewardedAd showFrom:viewController ?: [ALUtils topViewControllerFromKeyWindow]];
     }
     else
     {
@@ -271,29 +270,21 @@
 
 @implementation AppLovinTappxInterstitialDelegate
 
-- (instancetype)initWithParentAdapter:(ALTappxMediationAdapter *)parentAdapter andNotify:(id<MAInterstitialAdapterDelegate>)delegate
-{
-    self = [super init];
-    if ( self )
-    {
+- (instancetype)initWithParentAdapter:(ALTappxMediationAdapter *)parentAdapter andNotify:(id<MAInterstitialAdapterDelegate>)delegate {
+    if (self = [super init]) {
         self.parentAdapter = parentAdapter;
         self.delegate = delegate;
     }
     return self;
 }
 
-- (UIViewController *)presentViewController
-{
-    return self.parentAdapter.presentingViewController ?: [ALUtils topViewControllerFromKeyWindow];
-}
-
-- (void)tappxInterstitialViewControllerDidFinishLoad:(TappxInterstitialViewController *)viewController
+- (void)tappxInterstitialAdDidFinishLoad:(TappxInterstitialAd *)interstitialAd
 {
     [self.parentAdapter log: @"Interstitial ad loaded"];
     [self.delegate didLoadInterstitialAd];
 }
 
-- (void)tappxInterstitialViewControllerDidFail:(TappxInterstitialViewController *)viewController withError:(TappxErrorAd *)error
+- (void)tappxInterstitialAdDidFail:(TappxInterstitialAd *)interstitialAd withError:(TappxErrorAd *)error
 {
     MAAdapterError *adapterError = [ALTappxMediationAdapter toMaxError: error];
     
@@ -301,28 +292,23 @@
     [self.delegate didFailToLoadInterstitialAdWithError: adapterError];
 }
 
-- (void)tappxInterstitialViewControllerDidAppear:(TappxInterstitialViewController *)viewController
+- (void)tappxInterstitialAdDidAppear:(TappxInterstitialAd *)interstitialAd
 {
     [self.parentAdapter log: @"Interstitial ad shown"];
     [self.delegate didDisplayInterstitialAd];
 }
 
-- (void)tappxInterstitialViewControllerDidPress:(TappxInterstitialViewController *)viewController
+- (void)tappxInterstitialAdDidPress:(TappxInterstitialAd *)interstitialAd
 {
     [self.parentAdapter log: @"Interstitial ad clicked"];
     [self.delegate didClickInterstitialAd];
 }
 
-- (void)tappxInterstitialViewControllerDidClose:(TappxInterstitialViewController *)viewController
+- (void)tappxInterstitialAdDidClose:(TappxInterstitialAd *)interstitialAd
 {
     [self.parentAdapter log: @"Interstitial ad hidden"];
     [self.delegate didHideInterstitialAd];
 }
-
-- (void)present:(nonnull UIViewController *)viewController {
-    [(self.parentAdapter.presentingViewController ?: [ALUtils topViewControllerFromKeyWindow]) presentViewController:viewController animated:false completion:nil];
-}
-
 
 @end
 
@@ -341,19 +327,14 @@
 
 #pragma mark - TappxAdViewDelegate Methods
 
-- (UIViewController *)presentViewController
-{
-    return self.parentAdapter.presentingViewController ?: [ALUtils topViewControllerFromKeyWindow];
-}
-
-- (void)tappxBannerViewControllerDidFinishLoad:(TappxBannerViewController *)viewController
+- (void)tappxBannerViewDidFinishLoad:(TappxBannerView *)viewController
 {
     [self.parentAdapter log: @"AdView ad loaded"];
-    [self.delegate didLoadAdForAdView: self.parentAdapter.adViewContainer];
+    [self.delegate didLoadAdForAdView: self.parentAdapter.adView];
     [self.delegate didDisplayAdViewAd];
 }
 
-- (void)tappxBannerViewControllerDidFail:(TappxBannerViewController *)viewController withError:(TappxErrorAd *)error
+- (void)tappxBannerViewDidFail:(TappxBannerView *)viewController withError:(TappxErrorAd *)error
 {
     MAAdapterError *adapterError = [ALTappxMediationAdapter toMaxError: error];
     
@@ -361,13 +342,13 @@
     [self.delegate didFailToLoadAdViewAdWithError: adapterError];
 }
 
-- (void)tappxBannerViewControllerDidPress:(TappxBannerViewController *)viewController
+- (void)tappxBannerViewDidPress:(TappxBannerView *)viewController
 {
     [self.parentAdapter log: @"AdView ad clicked"];
     [self.delegate didClickAdViewAd];
 }
 
-- (void)tappxBannerViewControllerDidClose:(TappxBannerViewController *)viewController
+- (void)tappxBannerViewDidClose:(TappxBannerView *)viewController
 {
     [self.parentAdapter log: @"AdView ad closed"];
 }
@@ -386,55 +367,47 @@
     return self;
 }
 
-- (void)present:(nonnull UIViewController*)viewController {
-    [(self.parentAdapter.presentingViewController ?: [ALUtils topViewControllerFromKeyWindow]) presentViewController:viewController animated:false completion:nil];
-}
-
-- (nonnull UIViewController *)presentViewController {
-    return self.parentAdapter.presentingViewController ?: [ALUtils topViewControllerFromKeyWindow];
-}
-
-- (void) tappxRewardedViewControllerDidFinishLoad:(nonnull TappxRewardedViewController*) viewController {
+- (void) tappxRewardedAdDidFinishLoad:(nonnull TappxRewardedAd*) rewardedAd {
     [self.parentAdapter log: @"Rewarded ad loaded"];
     [self.delegate didLoadRewardedAd];
 }
 
-- (void) tappxRewardedViewControllerDidFail:(nonnull TappxRewardedViewController*) viewController withError:(nonnull TappxErrorAd*) error {
+- (void) tappxRewardedAdDidFail:(nonnull TappxRewardedAd*) rewardedAd withError:(nonnull TappxErrorAd*) error {
     MAAdapterError *adapterError = [ALTappxMediationAdapter toMaxError: error];
     
     [self.parentAdapter log: @"Rewarded ad failed to load with error: %@", adapterError];
     [self.delegate didFailToLoadRewardedAdWithError: adapterError];
 }
 
-- (void) tappxRewardedViewControllerClicked:(nonnull TappxRewardedViewController*) viewController {
+- (void) tappxRewardedAdClicked:(nonnull TappxRewardedAd*) rewardedAd {
     [self.parentAdapter log: @"Rewarded ad clicked"];
     [self.delegate didClickRewardedAd];
 }
 
-- (void) tappxRewardedViewControllerPlaybackFailed:(nonnull TappxRewardedViewController*) viewController {
+- (void) tappxRewardedAdPlaybackFailed:(nonnull TappxRewardedAd*) rewardedAd {
     [self.parentAdapter log: @"Rewarded ad Playback failed"];
     [self.delegate didFailToDisplayRewardedAdWithError:[MAAdapterError errorWithCode:[MAAdapterError errorCodeRewardError]]];
 }
 
-- (void) tappxRewardedViewControllerVideoClosed:(nonnull TappxRewardedViewController*) viewController {
+- (void) tappxRewardedAdVideoClosed:(nonnull TappxRewardedAd*) rewardedAd {
     [self.parentAdapter log: @"Rewarded ad closed"];
 }
 
-- (void) tappxRewardedViewControllerVideoCompleted:(nonnull TappxRewardedViewController*) viewController {
+- (void) tappxRewardedAdVideoCompleted:(nonnull TappxRewardedAd*) rewardedAd {
     [self.parentAdapter log: @"Rewarded ad video completed"];
 }
 
-- (void) tappxRewardedViewControllerDidAppear:(nonnull TappxRewardedViewController *)viewController {
+- (void) tappxRewardedAdDidAppear:(nonnull TappxRewardedAd *) rewardedAd {
     [self.parentAdapter log: @"Rewarded ad appear"];
     [self.delegate didDisplayRewardedAd];
 }
 
-- (void) tappxRewardedViewControllerDismissed:(nonnull TappxRewardedViewController *) viewController {
+- (void) tappxRewardedAdDismissed:(nonnull TappxRewardedAd *) rewardedAd {
     [self.parentAdapter log: @"Rewarded ad dismissed"];
     [self.delegate didHideRewardedAd];
 }
 
-- (void) tappxRewardedViewControllerUserDidEarnReward:(nonnull TappxRewardedViewController*) viewController {
+- (void) tappxRewardedAdUserDidEarnReward:(nonnull TappxRewardedAd*) rewardedAd {
     [self.parentAdapter log: @"Rewarded ad rewardUser"];
     [self.delegate didRewardUserWithReward:[self.parentAdapter reward]];
 }

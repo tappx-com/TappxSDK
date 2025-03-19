@@ -8,23 +8,12 @@
 
 @interface ISTappxCustomBanner ()
 
-@property (strong, nonatomic) TappxBannerViewController* bannerAd;
-@property (nonatomic, strong) UIView *adView;
+@property (strong, nonatomic) TappxBannerView* bannerAd;
 @property (strong, nonatomic) id<ISBannerAdDelegate> adDelegate;
 
 @end
 
 @implementation ISTappxCustomBanner
-
-static UIViewController* rootVC;
-
-+ (UIViewController *) _getRootVC {
-    return rootVC;
-}
-
-+ (void) _setRootVC:(UIViewController *) vc {
-    rootVC = vc;
-}
 
 typedef NS_ENUM (NSInteger) {
     IS_NO_FILL = 0,
@@ -57,7 +46,7 @@ typedef NS_ENUM (NSInteger) {
     }
     
     TappxBannerSize tappxsize = TappxBannerSmartBanner;
-    CGRect sizeFrame = CGRectMake(0, 0, (([[UIDevice currentDevice] userInterfaceIdiom]==UIUserInterfaceIdiomPhone) ? 320 : 728 ), (([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) ? 50 : 90));
+    CGRect sizeFrame = CGRectMake(0, 0, (([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) ? 320 : 728 ), (([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) ? 50 : 90));
     if (size.sizeDescription == kSizeBanner){
         tappxsize = TappxBannerSize320x50;
         sizeFrame = CGRectMake(0, 0, 320, 50);
@@ -69,8 +58,7 @@ typedef NS_ENUM (NSInteger) {
         sizeFrame = CGRectMake(0, 0, 300, 250);
     }
     
-    self.adView = [[UIView alloc] initWithFrame:sizeFrame];
-    self.bannerAd = [[TappxBannerViewController alloc] initWithDelegate:self andSize:tappxsize andView:self.adView];
+    self.bannerAd = [[TappxBannerView alloc] initWithDelegate:self andSize:tappxsize];
     [self.bannerAd load];
 
 }
@@ -78,11 +66,6 @@ typedef NS_ENUM (NSInteger) {
 - (void) destroyAdWithAdData:(nonnull ISAdData *)adData {
     if(self.bannerAd != nil){
         [self.bannerAd removeBanner];
-        self.bannerAd = nil;
-    }
-    
-    if(self.adView != nil) {
-        self.adView = nil;
     }
 }
 
@@ -91,40 +74,28 @@ typedef NS_ENUM (NSInteger) {
         [self.bannerAd removeBanner];
         self.bannerAd = nil;
     }
-    
-    if(self.adView != nil) {
-        self.adView = nil;
-    }
-}
-- (void)present:(nonnull UIViewController *)viewController withCompletions:(void (^ _Nonnull)(void))completion {
-    [[ISTappxCustomBanner _getRootVC] presentViewController:viewController animated:false completion:completion];
-}
-- (nonnull UIViewController *)presentViewController {
-    return [ISTappxCustomBanner _getRootVC];
 }
 
-//TAPPXBannerDelegate
+//MARK: - TAPPXBannerDelegate
 
-- (void) tappxBannerViewControllerDidFinishLoad:(TappxBannerViewController*) vc {
-    [_adDelegate adDidLoadWithView:self.adView];
+- (void) tappxBannerViewDidFinishLoad:(TappxBannerView*) vc {
+    [_adDelegate adDidLoadWithView:self.bannerAd];
     [_adDelegate adDidOpen];
 }
 
-- (void) tappxBannerViewControllerDidPress:(TappxBannerViewController*) vc {
+- (void) tappxBannerViewDidPress:(TappxBannerView*) vc {
     [_adDelegate adDidClick];
 }
 
-- (void) tappxBannerViewControllerDidFail:(TappxBannerViewController*) vc withError:(TappxErrorAd*) error {
+- (void) tappxBannerViewDidFail:(TappxBannerView*) vc withError:(TappxErrorAd*) error {
     [self descriptionError:error.code andDescription:error.localizedDescription];
     
     if(self.bannerAd != nil){
         [self.bannerAd removeBanner];
         self.bannerAd = nil;
     }
-    if (self.adView != nil)
-        self.adView = nil;
 }
-- (void) tappxBannerViewControllerDidClose:(TappxBannerViewController*) vc {
+- (void) tappxBannerViewDidClose:(TappxBannerView*) vc {
     [_adDelegate adDidDismissScreen];
 }
 

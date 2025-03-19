@@ -8,6 +8,6 @@
 #import "IronSource/IronSource.h"
 #import <TappxFramework/TappxAds.h>
 
-@interface ISTappxCustomRewardedVideo : ISBaseRewardedVideo<TappxRewardedViewControllerDelegate>
+@interface ISTappxCustomRewardedVideo : ISBaseRewardedVideo<TappxRewardedAdDelegate>
 
 @end
