@@ -33,13 +33,16 @@ typedef NS_ENUM (NSInteger) {
     if (adData != nil){
         NSString *tappxKey = [adData.configuration valueForKey:@"tappxkey"];
         NSString *isTest = [adData.configuration valueForKey:@"test"];
+        NSString *endpoint = [adData.configuration valueForKey:@"endpoint"];
         if (isTest != nil && [isTest isEqualToString:@"1"]){
             [TappxFramework addTappxKey:tappxKey testMode:YES];
         }
         else {
             [TappxFramework addTappxKey:tappxKey fromNonNative:@"ironsource"];
         }
-    
+        if (endpoint != nil && ![endpoint isEqualToString:@""] && [endpoint length] > 3){
+            [TappxFramework setEndpoint:endpoint];
+        }
     } else {
         [self descriptionError:IS_NO_FILL andDescription: @"Missing AdUnit"];
         return;
