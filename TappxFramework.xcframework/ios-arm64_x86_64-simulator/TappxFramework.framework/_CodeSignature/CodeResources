@@ -6,27 +6,39 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		gA4iI/Q+2Dj1c1sGLiKQkSt2W6g=
+		6J5VpAeJHaj2pmuiobzsruIvXZA=
 		</data>
-		<key>Headers/ITPXCrossPromotionAdapter.h</key>
+		<key>Headers/ITPXAdapter.h</key>
 		<data>
-		bx+G6HWDqO1Huwxjs0/wNrL+Pd0=
+		aJW/vwuQGwWAU2EzTxRyZFfdGDY=
 		</data>
-		<key>Headers/ITPXCrossPromotionAdapterDelegate.h</key>
+		<key>Headers/ITPXAdapterDelegate.h</key>
 		<data>
-		wQqsQ07MTmv6extPfFPzsujjcBI=
+		51l7tbv3kqS1oQyufudZzVwgNMw=
+		</data>
+		<key>Headers/ITPXGoogleAdManagerAdapterBanner.h</key>
+		<data>
+		PCNW4o5QEYfymyN+jLGa8eiAvG0=
+		</data>
+		<key>Headers/ITPXGoogleAdManagerAdapterInterstitial.h</key>
+		<data>
+		ocFtPnuy6PfFfQC65ynOCQYxChw=
+		</data>
+		<key>Headers/ITPXGoogleAdManagerAdapterRewarded.h</key>
+		<data>
+		MP2fDR7Mcl/c21vlLn0bvSCnAFA=
 		</data>
 		<key>Headers/TappxAds.h</key>
 		<data>
-		d+1CsOg+OekTvQMbaWWfuY8kIag=
+		kU/RZWp6dCXSrz8CDuuiV6Z0rkM=
 		</data>
 		<key>Headers/TappxBannerView.h</key>
 		<data>
-		JSYmiLF3+PyGfsXUIXxi5McyIQQ=
+		2aDC8hhexqtQSYsXWM67czMRjhs=
 		</data>
 		<key>Headers/TappxBannerViewController.h</key>
 		<data>
-		vVm93hzw8AADN5eo9ReY2UGk+Q4=
+		Fu7V0TmiINXfu/GP5SczfeKklF4=
 		</data>
 		<key>Headers/TappxBannerViewControllerDelegate.h</key>
 		<data>
@@ -42,7 +54,7 @@
 		</data>
 		<key>Headers/TappxFramework-Swift.h</key>
 		<data>
-		z7WdDDY7OKFhrDBLMCDkDKSIQ8s=
+		VfyMIfJMtdXv6muJxUC+29VTh4A=
 		</data>
 		<key>Headers/TappxFramework.h</key>
 		<data>
@@ -82,7 +94,7 @@
 		</data>
 		<key>Headers/TappxSettings.h</key>
 		<data>
-		Do6klcyYTjbB906+N5ekaT6GnjI=
+		sHOOKWC8ODdm+lCkjDg1rTvZeko=
 		</data>
 		<key>Headers/TappxVASTURL.h</key>
 		<data>
@@ -90,7 +102,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		vaO1uPbaoLNp4A+SZxejeiOsf9k=
+		FhamxmbHyXsyTBgF94T2/2P7cVc=
 		</data>
 		<key>Modules/TappxFramework.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -98,19 +110,19 @@
 		</data>
 		<key>Modules/TappxFramework.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		OecT9vXm3KTnO6ZrioUndu4mCj8=
+		/yOq9JplvwsMLXYpGxkTaIqVQOk=
 		</data>
 		<key>Modules/TappxFramework.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		olU/PNts5VMFkGKlrAR6ycYWoJs=
+		KH3FZIU8Y/T+Lpw9wlam6Vou5T4=
 		</data>
 		<key>Modules/TappxFramework.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		OecT9vXm3KTnO6ZrioUndu4mCj8=
+		/yOq9JplvwsMLXYpGxkTaIqVQOk=
 		</data>
 		<key>Modules/TappxFramework.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		AkNSXwY4Z0FX/CIW7EfUXl2qis0=
+		1uIH5PzjZIn0Dl1+QJQTXLkR0us=
 		</data>
 		<key>Modules/TappxFramework.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -118,19 +130,19 @@
 		</data>
 		<key>Modules/TappxFramework.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		lo1SYBdfoT7ju9nR2RzbH1gPSPM=
+		FsxWnESxHWWEQMhyIEOoW5HVoxs=
 		</data>
 		<key>Modules/TappxFramework.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		psvJhokNw8ZZAJgbqF079KoQ4k4=
+		qKpUVH/bQEDMDPE/Ru4rpbFT4uA=
 		</data>
 		<key>Modules/TappxFramework.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		lo1SYBdfoT7ju9nR2RzbH1gPSPM=
+		FsxWnESxHWWEQMhyIEOoW5HVoxs=
 		</data>
 		<key>Modules/TappxFramework.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		+9X/RbGHuB5kIKMIABg4miQaPSc=
+		UnJR54Z4/3RGPn4fSfU1DaWEy10=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -159,42 +171,63 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			S4/jyrc36xdBx0mPgyrwSwOmUuayhfAqF1atJVgVYcw=
+			Et5DSHk3YfY2jpcua41iP6nhV07t2ATk5+2BmbQPIyY=
 			</data>
 		</dict>
-		<key>Headers/ITPXCrossPromotionAdapter.h</key>
+		<key>Headers/ITPXAdapter.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VxeW9Mv8uuIfd4UfRbaXwej0qh9FHgF9QvSJkFDRIvM=
+			v00HPejIjlN9qTe4Gd5+zT+CSMdcLibhQPVPenv2Xbs=
 			</data>
 		</dict>
-		<key>Headers/ITPXCrossPromotionAdapterDelegate.h</key>
+		<key>Headers/ITPXAdapterDelegate.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iTqgwel84g3GgkTSrB5POzBnXUsw1M+W0QJ92GOSs+o=
+			scw6zHW9vcmmEuWeA4zo6J5MM89ONyLdTR3ESTTprzk=
+			</data>
+		</dict>
+		<key>Headers/ITPXGoogleAdManagerAdapterBanner.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			FitjMYeYVvMjIdoBOoSSpRg2TzQ+s8WseUA5FSpfSbQ=
+			</data>
+		</dict>
+		<key>Headers/ITPXGoogleAdManagerAdapterInterstitial.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			iv+ZU8YMYwhVJg+QXNIdoSrtTLQ6OoLQiWwSpYorS6A=
+			</data>
+		</dict>
+		<key>Headers/ITPXGoogleAdManagerAdapterRewarded.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			gceVZmKKVt9z78CnLRWNzGjQDit9wW8PY7m60wQsEdU=
 			</data>
 		</dict>
 		<key>Headers/TappxAds.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9Eb1ktggR1fCTHRXEGWVaZjmjX/nlob6ud030jzbAgQ=
+			Ody1svjox4i4ynqmrfwGjgi1Ic66BwkTFl1ngKEKfAI=
 			</data>
 		</dict>
 		<key>Headers/TappxBannerView.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			tsTyKgoNiqLPMGjuKKP8oncapFvCU6mN9W9WjUfTT2Q=
+			teNaBDdcaKHGLHsRoQtWrdmxFA/Z5KnrbXRM/CYrIv8=
 			</data>
 		</dict>
 		<key>Headers/TappxBannerViewController.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yzvsXB/+jlsXhICmmj4wRYxuo5oogBOz+x3tLnPU99I=
+			xWxx0MRYwFwBVHa+W+L4GBkfXPsdg6ZUMab611VoH7c=
 			</data>
 		</dict>
 		<key>Headers/TappxBannerViewControllerDelegate.h</key>
@@ -222,7 +255,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8hDIf/S2No9wL8sebIjIuwAzfXr4Zk4lVzp4jaTKWok=
+			cEMbFlso+KRZtmDCTW3cSVtCV4hUpEeqi3oMjVKon1c=
 			</data>
 		</dict>
 		<key>Headers/TappxFramework.h</key>
@@ -292,7 +325,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Or9/cDW5wpx79zFcHMmyavyw9Nu9nwqJbbfVFDWAASA=
+			WlSuld3Bed9GdyOHz7BqrIJFAfKIb7CiUcxGTh6Z1FA=
 			</data>
 		</dict>
 		<key>Headers/TappxVASTURL.h</key>
@@ -313,28 +346,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Z6eQHDsjNwYxDPfbKTD7Dl0Zlf5beaxu+f2niarX9oA=
+			ZWKV25DYq2m9gPDK+YLJtjxxoOQiTRem6LDxzLdZ430=
 			</data>
 		</dict>
 		<key>Modules/TappxFramework.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ub5x8eO9bxAis+71ildGf6u+R/oK86NAPyvd2eXGxT0=
+			esPJYf4c7By+2j2FbGteARYGWDQ+uV6EeirmDLAacF8=
 			</data>
 		</dict>
 		<key>Modules/TappxFramework.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Z6eQHDsjNwYxDPfbKTD7Dl0Zlf5beaxu+f2niarX9oA=
+			ZWKV25DYq2m9gPDK+YLJtjxxoOQiTRem6LDxzLdZ430=
 			</data>
 		</dict>
 		<key>Modules/TappxFramework.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YCi1hs16Dehs/sxnflldUTJJT8GYHcxQNNpKH9PRHTM=
+			GOZ6PBVhLiV63CFYHcB7Y0wcosA4VGB8ONlEuEvoduk=
 			</data>
 		</dict>
 		<key>Modules/TappxFramework.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -348,28 +381,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			aBIQn6GfLYXumzlZkAk0MSEXmjFYpGddB3M6w2tTyhs=
+			TXloM6RdKti+UYmg8NxRKuftQq8Bdm3OZf/Wr4Z3S+8=
 			</data>
 		</dict>
 		<key>Modules/TappxFramework.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Se9HkPOXlCAG1rquWicMZMb09SReAYe5ohpyd3X0PJs=
+			b5ml0+CpkPIMTVOgCKa3qCvMsNEFnJbK1XW6hDP3wS0=
 			</data>
 		</dict>
 		<key>Modules/TappxFramework.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			aBIQn6GfLYXumzlZkAk0MSEXmjFYpGddB3M6w2tTyhs=
+			TXloM6RdKti+UYmg8NxRKuftQq8Bdm3OZf/Wr4Z3S+8=
 			</data>
 		</dict>
 		<key>Modules/TappxFramework.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			t717K47DULjh/V0b+XwXL1SNlgorNOdBdNfEeC9ILQc=
+			GoO9tNo1WQZ0QAHUDKgFKZ7n98xvLMpC5UbZh2+xz/g=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

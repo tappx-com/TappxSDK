@@ -16,8 +16,11 @@
 #import <TappxFramework/TappxSettings.h>
 #import <TappxFramework/TappxErrorAd.h>
 #import <TappxFramework/TappxVASTURL.h>
-#import <TappxFramework/ITPXCrossPromotionAdapterDelegate.h>
-#import <TappxFramework/ITPXCrossPromotionAdapter.h>
+#import <TappxFramework/ITPXAdapterDelegate.h>
+#import <TappxFramework/ITPXAdapter.h>
+#import <TappxFramework/ITPXGoogleAdManagerAdapterBanner.h>
+#import <TappxFramework/ITPXGoogleAdManagerAdapterInterstitial.h>
+#import <TappxFramework/ITPXGoogleAdManagerAdapterRewarded.h>
 
 #import <TappxFramework/TappxBannerViewController.h>
 #import <TappxFramework/TappxBannerViewControllerDelegate.h>

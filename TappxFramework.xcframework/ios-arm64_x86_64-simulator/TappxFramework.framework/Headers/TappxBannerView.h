@@ -22,18 +22,6 @@ NS_SWIFT_NAME(TappxBannerView)
 - (nonnull instancetype)initWithSize:(TappxBannerSize)size NS_SWIFT_NAME(init(size:));
 
 /**
- Initializes the banner view with a delegate, size, and position.
- 
- @param delegate The delegate to handle banner events.
- @param size The size of the banner.
- @param position The position of the banner.
- @return An initialized TappxBannerView instance.
- */
-- (nonnull instancetype)initWithDelegate:(nonnull id<TappxBannerViewDelegate>)delegate
-                                 andSize:(TappxBannerSize)size
-                             andPosition:(TappxBannerPosition)position NS_SWIFT_NAME(init(delegate:size:position:));
-
-/**
  Initializes the banner view with a delegate, size, and a specific location.
  
  @param delegate The delegate to handle banner events.

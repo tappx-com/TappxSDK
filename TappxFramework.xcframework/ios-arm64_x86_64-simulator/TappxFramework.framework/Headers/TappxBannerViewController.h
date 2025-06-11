@@ -15,8 +15,7 @@ NS_SWIFT_NAME(TappxBannerViewController)
 @interface TappxBannerViewController : NSObject
 
 - (nonnull instancetype)initWithDelegate:(nonnull id<TappxBannerViewControllerDelegate>)delegate
-                                 andSize:(TappxBannerSize)size
-                             andPosition:(TappxBannerPosition)position NS_SWIFT_NAME(init(delegate:size:position:));
+                                 andSize:(TappxBannerSize)size NS_SWIFT_NAME(init(delegate:size:));
 
 - (nonnull instancetype)initWithDelegate:(nonnull id<TappxBannerViewControllerDelegate>)delegate
                                  andSize:(TappxBannerSize)size

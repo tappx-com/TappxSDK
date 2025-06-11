@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "TappxSDK"
-  spec.version      = "4.2.1"
+  spec.version      = "4.2.2"
   spec.summary      = "Tappx SDK for iOS monetization."
   
   spec.description  = <<-DESC
@@ -59,7 +59,7 @@ Pod::Spec.new do |spec|
     ss.ios.deployment_target  = '12.0'
     ss.source_files = 'TPXCrossPromotionAdapter/*.{h,m}'
     ss.dependency "TappxSDK/TappxFramework"
-    ss.dependency "Google-Mobile-Ads-SDK", "~> 11.5.0"
+    ss.dependency "Google-Mobile-Ads-SDK", "~> 12.5.0"
     ss.xcconfig = { 
       "OTHER_LDFLAGS" => "-ObjC"
     }
@@ -85,6 +85,18 @@ Pod::Spec.new do |spec|
     ss.dependency "TappxSDK/TappxFramework"
     ss.dependency "IronSourceSDK", "~> 8.6.1.0"
     ss.dependency "IronSourceAdQualitySDK", "~> 7.23.0"
+    ss.xcconfig = { 
+      "OTHER_LDFLAGS" => "-ObjC"
+    }
+  end
+
+  spec.subspec 'TappxGoogleAdManager' do |ss|
+    ss.name         = "TappxGoogleAdManager"
+    ss.platform = :ios
+    ss.ios.deployment_target  = '12.0'
+    ss.source_files = 'GoogleAdManager/*.{h,m}'
+    ss.dependency "TappxSDK/TappxFramework"
+    ss.dependency "Google-Mobile-Ads-SDK", "~> 12.5.0"
     ss.xcconfig = { 
       "OTHER_LDFLAGS" => "-ObjC"
     }

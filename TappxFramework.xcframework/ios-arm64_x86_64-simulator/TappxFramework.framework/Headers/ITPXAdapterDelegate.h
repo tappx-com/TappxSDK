@@ -1,5 +1,5 @@
 //
-//  ITappxMediationAdapterDelegate.h
+//  ITPXAdMobAdapterDelegate.h
 //  TappxFramework
 //
 //  Created by Antonio Lai on 09/12/23.
@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-NS_SWIFT_NAME(ITPXCrossPromotionAdapterDelegate)
-@protocol ITPXCrossPromotionAdapterDelegate <NSObject>
+NS_SWIFT_NAME(ITPXAdapterDelegate)
+@protocol ITPXAdapterDelegate <NSObject>
 @required
 
 /**

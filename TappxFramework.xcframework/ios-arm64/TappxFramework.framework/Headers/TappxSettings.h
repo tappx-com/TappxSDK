@@ -58,21 +58,6 @@ typedef NS_ENUM(NSInteger, TappxBannerSize) {
 };
 
 /**
- Converts a TappxBannerPosition enum to its corresponding string representation.
- */
-#define TappxBannerPositionString(enum) [@[@"TOP", @"BOTTOM", @"CUSTOM"] objectAtIndex:enum]
-
-/**
- Enum representing banner ad positioning options.
- */
-NS_SWIFT_NAME(TappxBannerPosition)
-typedef NS_ENUM(NSInteger, TappxBannerPosition) {
-    TappxBannerPositionTop = 0,
-    TappxBannerPositionBottom = 1,
-    TappxBannerPositionCustom = 2,
-};
-
-/**
  Converts a TappxAnimation enum to its corresponding string representation.
  */
 #define TappxAnimation(enum) [@[@"NONE", @"RANDOM", @"LEFT_To_RIGHT", @"LEFT_To_RIGHT_BOUNCE", @"RIGHT_To_LEFT", @"RIGHT_To_LEFT_BOUNCE"] objectAtIndex:enum]
