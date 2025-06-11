@@ -53,18 +53,6 @@ Pod::Spec.new do |spec|
     }
   end
 
-  spec.subspec 'TappxGoogleAdsAdapter' do |ss|
-    ss.name         = "TappxGoogleAdsAdapter"
-    ss.platform = :ios
-    ss.ios.deployment_target  = '12.0'
-    ss.source_files = 'TPXCrossPromotionAdapter/*.{h,m}'
-    ss.dependency "TappxSDK/TappxFramework"
-    ss.dependency "Google-Mobile-Ads-SDK", "~> 12.5.0"
-    ss.xcconfig = { 
-      "OTHER_LDFLAGS" => "-ObjC"
-    }
-  end
-
   spec.subspec 'TappxAppLovinAdapter' do |ss|
     ss.name         = "TappxAppLovinAdapter"
     ss.platform = :ios
