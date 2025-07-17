@@ -8,6 +8,22 @@
 		<data>
 		6J5VpAeJHaj2pmuiobzsruIvXZA=
 		</data>
+		<key>Frameworks/OMSDK_Tappx.framework/Info.plist</key>
+		<data>
+		8Kc/s+ZsfAXU3QPBpEpSwGrTXmM=
+		</data>
+		<key>Frameworks/OMSDK_Tappx.framework/OMSDK_Tappx</key>
+		<data>
+		9oiFRu2oViLCQVIHLzzsN+EISzQ=
+		</data>
+		<key>Frameworks/OMSDK_Tappx.framework/PrivacyInfo.xcprivacy</key>
+		<data>
+		7BgfS40JHW2Znl7afTrGvxB58Ws=
+		</data>
+		<key>Frameworks/OMSDK_Tappx.framework/_CodeSignature/CodeResources</key>
+		<data>
+		aIXFVBXQ1OfRT/JTteqOCcxj9aU=
+		</data>
 		<key>Headers/ITPXAdapter.h</key>
 		<data>
 		aJW/vwuQGwWAU2EzTxRyZFfdGDY=
@@ -102,7 +118,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		FAz45ZgscQ6ptW7WDMZoBdOQit8=
+		5tMm7H7629t23AIhwaH1pg32Rt0=
 		</data>
 		<key>Modules/TappxFramework.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -122,7 +138,7 @@
 		</data>
 		<key>Modules/TappxFramework.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		1uIH5PzjZIn0Dl1+QJQTXLkR0us=
+		MIVokWS/mbQPA6ieg0BiWy/ZIgM=
 		</data>
 		<key>Modules/TappxFramework.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -142,7 +158,7 @@
 		</data>
 		<key>Modules/TappxFramework.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		UnJR54Z4/3RGPn4fSfU1DaWEy10=
+		QoEgGBaMwJ339JlE2NsNqJuxgF0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -162,7 +178,7 @@
 		</data>
 		<key>omsdk-v1.js</key>
 		<data>
-		ooF6nmPFIk7twLDRefviZtdSgKA=
+		/FjBTJpagDeqPB5uc+UnMU6nETs=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -172,6 +188,34 @@
 			<key>hash2</key>
 			<data>
 			Et5DSHk3YfY2jpcua41iP6nhV07t2ATk5+2BmbQPIyY=
+			</data>
+		</dict>
+		<key>Frameworks/OMSDK_Tappx.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			lYwgkadVcR/8cd4B+hkMUlQDqmZMOMOvV6reMS/W9Cs=
+			</data>
+		</dict>
+		<key>Frameworks/OMSDK_Tappx.framework/OMSDK_Tappx</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			18DRX6zRihYGbJvZVIRbfIkiUj0u1HdL9y9RkAJr40g=
+			</data>
+		</dict>
+		<key>Frameworks/OMSDK_Tappx.framework/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			5rdpDTW6MDoz1u2y0rCJB5ensp/KZWPv7EAq4o8GtfM=
+			</data>
+		</dict>
+		<key>Frameworks/OMSDK_Tappx.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			tXynxmIgrhRj2WQPW65FuVXGlO7/ygiYhq4FPllOOTA=
 			</data>
 		</dict>
 		<key>Headers/ITPXAdapter.h</key>
@@ -367,7 +411,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GOZ6PBVhLiV63CFYHcB7Y0wcosA4VGB8ONlEuEvoduk=
+			+PluGR5WUORkIqk69n1deB+OdPd0i4cfqQT4ewrpGDo=
 			</data>
 		</dict>
 		<key>Modules/TappxFramework.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -402,7 +446,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GoO9tNo1WQZ0QAHUDKgFKZ7n98xvLMpC5UbZh2+xz/g=
+			MpRD/Am9VO17E0x91I/610FrHSx+vBWowR1DkX0vBZQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -437,7 +481,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			S+wmvZJLmAIoXg3ROfHt+QiEN1FykFILzjidhjY2XSA=
+			itPXnRHb9bwZ2OeVkjTNiZN7t+w8APD7ZqeW1dBFb/A=
 			</data>
 		</dict>
 	</dict>
