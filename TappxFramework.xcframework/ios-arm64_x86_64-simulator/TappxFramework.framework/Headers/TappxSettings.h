@@ -98,6 +98,10 @@ NS_SWIFT_NAME(TappxSettings)
 /// - Returns: A string representing the mediation platform, or `nil` if not set.
 - (nullable NSString *)getMediation NS_SWIFT_NAME(getMediation());
 
+/// Retrieves the bidding ads.
+/// - Returns: A JSON string with bidding ads, or `nil` if not set.
+- (nullable NSString *)getBiddingJSON NS_SWIFT_NAME(getBiddingJSON());
+
 /// Retrieves the list of keywords associated with the user.
 /// - Returns: An array of strings representing keywords, or `nil` if not set.
 - (nullable NSArray <NSString*> *)getKeywords NS_SWIFT_NAME(getKeywords());
@@ -121,6 +125,10 @@ NS_SWIFT_NAME(TappxSettings)
 /// Sets the mediation platform.
 /// - Parameter mediation: A string representing the mediation platform, or `nil` to unset.
 - (void)setMediation:(nullable NSString *)mediation NS_SWIFT_NAME(setMediation(mediation:));
+
+/// Sets the bidding ads
+/// - Parameter bidding JSON: A JSON string with bidding ads, or `nil` to unset.
+- (void)setBiddingJSON:(nullable NSString *)biddingJSON NS_SWIFT_NAME(setBiddingJSON(biddingJSON:));
 
 /// Sets the list of keywords associated with the user.
 /// - Parameter keywords: An array of strings representing keywords, or `nil` to unset.

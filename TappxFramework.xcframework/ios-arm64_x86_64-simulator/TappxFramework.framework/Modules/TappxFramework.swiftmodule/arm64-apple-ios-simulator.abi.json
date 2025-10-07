@@ -22,7 +22,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(tappxKey:extraTappxKey:size:animation:onEvent:)",
+            "printedName": "init(tappxKey:extraTappxKey:tappxSettings:size:disableRefresh:animation:setTimeRefresh:onEvent:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -62,15 +62,60 @@
               },
               {
                 "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "TappxFramework.TappxSettings?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TappxSettings",
+                    "printedName": "TappxFramework.TappxSettings",
+                    "usr": "c:objc(cs)TappxSettings"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
                 "name": "TappxBannerSize",
                 "printedName": "TappxFramework.TappxBannerSize",
                 "usr": "c:@E@TappxBannerSize"
               },
               {
                 "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
                 "name": "TappxAnimation",
                 "printedName": "TappxFramework.TappxAnimation",
                 "usr": "c:@E@TappxAnimation"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -101,8 +146,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:14TappxFramework17UITappxBannerViewV8tappxKey05extraaG04size9animation7onEventACSSSg_AISo0aD4SizeVSo0A9AnimationVyAA0adL0OcSgtcfc",
-            "mangledName": "$s14TappxFramework17UITappxBannerViewV8tappxKey05extraaG04size9animation7onEventACSSSg_AISo0aD4SizeVSo0A9AnimationVyAA0adL0OcSgtcfc",
+            "usr": "s:14TappxFramework17UITappxBannerViewV8tappxKey05extraaG00F8Settings4size14disableRefresh9animation07setTimeL07onEventACSSSg_ALSo0aI0CSgSo0aD4SizeVSbSgSo0A9AnimationVSiSgyAA0adQ0OcSgtcfc",
+            "mangledName": "$s14TappxFramework17UITappxBannerViewV8tappxKey05extraaG00F8Settings4size14disableRefresh9animation07setTimeL07onEventACSSSg_ALSo0aI0CSgSo0aD4SizeVSbSgSo0A9AnimationVSiSgyAA0adQ0OcSgtcfc",
             "moduleName": "TappxFramework",
             "declAttributes": [
               "Preconcurrency",
@@ -229,6 +274,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -523,6 +575,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -558,6 +617,13 @@
     "json_format_version": 8
   },
   "ConstValues": [
+    {
+      "filePath": "\/Users\/antoniolai\/Lavoro\/Progetti\/tappX\/tappx-sdk-ios\/TappxFramework\/UI\/Ads\/Banner\/SwiftUI\/ViewRappresentable\/TappxBannerViewRappresentable.swift",
+      "kind": "BooleanLiteral",
+      "offset": 768,
+      "length": 5,
+      "value": "false"
+    },
     {
       "filePath": "\/Users\/antoniolai\/Library\/Developer\/Xcode\/DerivedData\/TappxFramework-feugdaohzeiqtydrejnnfquromtt\/Build\/Intermediates.noindex\/ArchiveIntermediates\/TappxFramework\/IntermediateBuildFilesPath\/TappxFramework.build\/Release-iphonesimulator\/TappxFramework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",

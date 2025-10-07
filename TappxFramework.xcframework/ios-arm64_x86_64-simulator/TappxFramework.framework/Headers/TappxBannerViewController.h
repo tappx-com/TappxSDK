@@ -33,8 +33,8 @@ NS_SWIFT_NAME(TappxBannerViewController)
 - (void)load;
 - (void)load:(nonnull TappxSettings *)settings NS_SWIFT_NAME(load(settings:));
 - (void)removeBanner;
-- (void)setRefreshTimeSeconds:(NSInteger)seconds NS_SWIFT_NAME(setRefreshTime(seconds:));
-- (void)setEnableAutoRefresh:(BOOL)autoRefresh NS_SWIFT_NAME(setAutoRefresh(enable:));
+- (void)setTimeRefresh:(NSInteger)seconds NS_SWIFT_NAME(setTimeRefresh(seconds:));
+- (void)disableRefresh;
 - (void)setAnimation:(TappxAnimation)animation NS_SWIFT_NAME(setAnimation(animation:));
 - (void)setExtraTappxKey:(nonnull NSString *)tappxExtraKey NS_SWIFT_NAME(setExtraKey(tappxKey:));
 

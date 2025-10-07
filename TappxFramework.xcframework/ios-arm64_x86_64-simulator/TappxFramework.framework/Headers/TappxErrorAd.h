@@ -30,7 +30,11 @@ typedef NS_ENUM(NSInteger, TappxErrorCode) {
     CANCELLED,
     
     /// No internet connection was detected.
-    NO_CONNECTION
+    NO_CONNECTION,
+    
+    /// Bidding Ad error on string response
+    BIDDING_AD_ERROR,
+    
 };
 
 NS_SWIFT_NAME(TappxErrorAd)

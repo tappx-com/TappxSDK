@@ -64,16 +64,15 @@ NS_SWIFT_NAME(TappxBannerView)
  Sets the time interval (in seconds) to refresh the banner.
  
  @param seconds The time interval in seconds for refreshing the banner.
+                The valid range is: 30...150.
+                Values outside this range will default to 30.
  */
-- (void)setRefreshTimeSeconds:(NSInteger)seconds NS_SWIFT_NAME(setRefreshTime(seconds:));
+- (void)setTimeRefresh:(NSInteger)seconds NS_SWIFT_NAME(setTimeRefresh(seconds:));
 
 /**
- Enables or disables automatic banner refresh.
- 
- @param autoRefresh A boolean indicating whether auto-refresh is enabled.
+ Disable automatic banner refresh.
  */
-- (void)setEnableAutoRefresh:(BOOL)autoRefresh NS_SWIFT_NAME(setAutoRefresh(enable:));
-
+- (void)disableRefresh;
 
 /**
  Sets the animation style for the banner.
