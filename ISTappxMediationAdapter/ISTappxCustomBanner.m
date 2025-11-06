@@ -61,8 +61,12 @@ typedef NS_ENUM (NSInteger) {
         sizeFrame = CGRectMake(0, 0, 300, 250);
     }
     
-    self.bannerAd = [[TappxBannerView alloc] initWithDelegate:self andSize:tappxsize];
-    [self.bannerAd load];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.bannerAd = [[TappxBannerView alloc] initWithDelegate:self andSize:tappxsize];
+        [self.bannerAd setRootViewController:viewController];
+        [self.bannerAd load];
+    });
+
 
 }
 
