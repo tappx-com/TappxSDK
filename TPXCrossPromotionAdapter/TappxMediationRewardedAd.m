@@ -83,7 +83,7 @@
                     }
                 }
             }
-        } isTest = [elements objectAtIndex: 1];
+        }
         
         if ( isTest != nil && [isTest isEqualToString:@"1" ] )
             [TappxFramework addTappxKey:key testMode:YES];
