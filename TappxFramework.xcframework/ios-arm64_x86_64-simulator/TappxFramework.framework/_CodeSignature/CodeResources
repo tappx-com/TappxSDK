@@ -8,6 +8,22 @@
 		<data>
 		L8Z9oPmkz9DUjZuUOwPDsE2WSyU=
 		</data>
+		<key>Frameworks/OMSDK_Tappx.framework/Info.plist</key>
+		<data>
+		iMJEOCLY7AmBaFr/dhmzpPumB/g=
+		</data>
+		<key>Frameworks/OMSDK_Tappx.framework/OMSDK_Tappx</key>
+		<data>
+		zlwhF9ty13KsiYQroz/CvEMOoPA=
+		</data>
+		<key>Frameworks/OMSDK_Tappx.framework/PrivacyInfo.xcprivacy</key>
+		<data>
+		7BgfS40JHW2Znl7afTrGvxB58Ws=
+		</data>
+		<key>Frameworks/OMSDK_Tappx.framework/_CodeSignature/CodeResources</key>
+		<data>
+		Nxb7v1aC8P3u6hDvYqUO2DWtDPc=
+		</data>
 		<key>Headers/ITPXAdapter.h</key>
 		<data>
 		aJW/vwuQGwWAU2EzTxRyZFfdGDY=
@@ -102,7 +118,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		IDHPQfOksbNby63HcAm1SlUCmow=
+		RGp17vlgDjuVZwH/+UoP7auvLOY=
 		</data>
 		<key>Modules/TappxFramework.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -162,7 +178,7 @@
 		</data>
 		<key>omsdk-v1.js</key>
 		<data>
-		ze92ROOUgBK/KIH6lChPVBmKDEA=
+		flu49ep64Khw2EbOD2LgY0HvggU=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -172,6 +188,34 @@
 			<key>hash2</key>
 			<data>
 			50gCUy7TQFxfP7lEfZoj4t27nNfJ4UIvwEowt/1q4pY=
+			</data>
+		</dict>
+		<key>Frameworks/OMSDK_Tappx.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			n7n5526GSDX32pw9GWSzjG4jtprRQTHDmdod/S+afRs=
+			</data>
+		</dict>
+		<key>Frameworks/OMSDK_Tappx.framework/OMSDK_Tappx</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			+NFRf3ZwlEq/fjsc0HKF7khDAXwoz1cNZXYGoBPspr4=
+			</data>
+		</dict>
+		<key>Frameworks/OMSDK_Tappx.framework/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			5rdpDTW6MDoz1u2y0rCJB5ensp/KZWPv7EAq4o8GtfM=
+			</data>
+		</dict>
+		<key>Frameworks/OMSDK_Tappx.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			fEDpmjDiz28lnrOfoL+UikpLDbRzb8ncD6XBMm84qJg=
 			</data>
 		</dict>
 		<key>Headers/ITPXAdapter.h</key>
@@ -437,7 +481,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5t6O+pxa+IQwAX8KFDgbwXdMD8foX9rwvKZ84sYD1xM=
+			G1LHyLNuDHSaD5mEUR5IsplsQjnmPNPlEIO1xrVB3zE=
 			</data>
 		</dict>
 	</dict>
