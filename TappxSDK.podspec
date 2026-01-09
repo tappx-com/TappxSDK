@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "TappxSDK"
-  spec.version      = "4.2.11"
+  spec.version      = "4.2.12"
   spec.summary      = "Tappx SDK for iOS monetization."
   
   spec.description  = <<-DESC
@@ -59,7 +59,7 @@ Pod::Spec.new do |spec|
     ss.ios.deployment_target  = '12.0'
     ss.source_files = 'ALTappxMediationAdapter/*.{h,m}'
     ss.dependency "TappxSDK/TappxFramework"
-    ss.dependency "AppLovinSDK", "~> 13.4.0"
+    ss.dependency "AppLovinSDK", "~> 13.5.0"
     ss.xcconfig = { 
       "OTHER_LDFLAGS" => "-ObjC"
     }
@@ -71,8 +71,8 @@ Pod::Spec.new do |spec|
     ss.ios.deployment_target  = '12.0'
     ss.source_files = 'ISTappxMediationAdapter/*.{h,m}'
     ss.dependency "TappxSDK/TappxFramework"
-    ss.dependency "IronSourceSDK", "~> 8.6.1.0"
-    ss.dependency "IronSourceAdQualitySDK", "~> 7.23.0"
+    ss.dependency "IronSourceSDK", "~> 9.2.0.0"
+    ss.dependency "IronSourceAdQualitySDK", "~> 9.1.1"
     ss.xcconfig = { 
       "OTHER_LDFLAGS" => "-ObjC"
     }

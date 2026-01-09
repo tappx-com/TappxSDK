@@ -274,13 +274,6 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "SendableMetatype",
-            "printedName": "SendableMetatype",
-            "usr": "s:s16SendableMetatypeP",
-            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -575,13 +568,6 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "SendableMetatype",
-            "printedName": "SendableMetatype",
-            "usr": "s:s16SendableMetatypeP",
-            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -618,35 +604,35 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/simonegallus\/Desktop\/Repositories\/Progetto Tappx\/tappx\/TappxFramework\/UI\/Ads\/Banner\/SwiftUI\/ViewRappresentable\/TappxBannerViewRappresentable.swift",
+      "filePath": "\/Users\/saradiazperez\/Documents\/APPS\/Tapxx\/SDK Tappx\/Tappx\/TappxFramework\/UI\/Ads\/Banner\/SwiftUI\/ViewRappresentable\/TappxBannerViewRappresentable.swift",
       "kind": "BooleanLiteral",
       "offset": 768,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/simonegallus\/Library\/Developer\/Xcode\/DerivedData\/TappxFramework-gsskmthgycwerefiowtgaareofbn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/TappxFramework\/IntermediateBuildFilesPath\/TappxFramework.build\/Release-iphonesimulator\/TappxFramework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/saradiazperez\/Library\/Developer\/Xcode\/DerivedData\/TappxFramework-etyphgjbyayvjjavhopzaozadjuv\/Build\/Intermediates.noindex\/ArchiveIntermediates\/TappxFramework\/IntermediateBuildFilesPath\/TappxFramework.build\/Release-iphonesimulator\/TappxFramework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 736,
       "length": 14,
       "value": "\"player.close\""
     },
     {
-      "filePath": "\/Users\/simonegallus\/Library\/Developer\/Xcode\/DerivedData\/TappxFramework-gsskmthgycwerefiowtgaareofbn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/TappxFramework\/IntermediateBuildFilesPath\/TappxFramework.build\/Release-iphonesimulator\/TappxFramework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/saradiazperez\/Library\/Developer\/Xcode\/DerivedData\/TappxFramework-etyphgjbyayvjjavhopzaozadjuv\/Build\/Intermediates.noindex\/ArchiveIntermediates\/TappxFramework\/IntermediateBuildFilesPath\/TappxFramework.build\/Release-iphonesimulator\/TappxFramework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 881,
       "length": 13,
       "value": "\"player.skip\""
     },
     {
-      "filePath": "\/Users\/simonegallus\/Library\/Developer\/Xcode\/DerivedData\/TappxFramework-gsskmthgycwerefiowtgaareofbn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/TappxFramework\/IntermediateBuildFilesPath\/TappxFramework.build\/Release-iphonesimulator\/TappxFramework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/saradiazperez\/Library\/Developer\/Xcode\/DerivedData\/TappxFramework-etyphgjbyayvjjavhopzaozadjuv\/Build\/Intermediates.noindex\/ArchiveIntermediates\/TappxFramework\/IntermediateBuildFilesPath\/TappxFramework.build\/Release-iphonesimulator\/TappxFramework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1029,
       "length": 15,
       "value": "\"speaker.slash\""
     },
     {
-      "filePath": "\/Users\/simonegallus\/Library\/Developer\/Xcode\/DerivedData\/TappxFramework-gsskmthgycwerefiowtgaareofbn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/TappxFramework\/IntermediateBuildFilesPath\/TappxFramework.build\/Release-iphonesimulator\/TappxFramework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/saradiazperez\/Library\/Developer\/Xcode\/DerivedData\/TappxFramework-etyphgjbyayvjjavhopzaozadjuv\/Build\/Intermediates.noindex\/ArchiveIntermediates\/TappxFramework\/IntermediateBuildFilesPath\/TappxFramework.build\/Release-iphonesimulator\/TappxFramework.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1177,
       "length": 14,
