@@ -52,6 +52,8 @@
 @property (nonatomic, strong) TappxBannerView *adView;
 @property (nonatomic, strong) AppLovinTappxAdViewDelegate *adViewAdDelegate;
 
+@property (nonatomic) BOOL isTappxSDKInitialized;
+
 @end
 
 @implementation ALTappxMediationAdapter
@@ -60,21 +62,11 @@
 
 - (void)initializeWithParameters:(id<MAAdapterInitializationParameters>)parameters completionHandler:(void (^)(MAAdapterInitializationStatus, NSString * _Nullable))completionHandler
 {
-    [self log: @"Initializing Tappx adapter... "];
+    self.isTappxSDKInitialized = NO;
     
-    NSString *appKey = [parameters.serverParameters al_stringForKey: @"app_id"];
-    NSDictionary *customParameters = parameters.customParameters;
-
-    if ( [parameters isTesting] || [customParameters al_boolForKey: @"is_testing"] || [customParameters al_boolForKey: @"test" ] ) {
-        [TappxFramework addTappxKey: appKey testMode: YES];
-    } else {
-        [TappxFramework addTappxKey: appKey fromNonNative: @"applovin"];
-    }
-    
-    NSString *endpoint = [parameters.serverParameters al_stringForKey: @"endpoint"];
-    if ( [endpoint al_isValidString] ) {
-        [TappxFramework setEndpoint: endpoint];
-    }
+    [self initializeTappxWithParameters:parameters.serverParameters
+                       customParameters:parameters.customParameters
+                              isTesting:parameters.isTesting];
     
     completionHandler(MAAdapterInitializationStatusDoesNotApply, nil);
 }
@@ -101,26 +93,13 @@
     self.adViewAdDelegate = nil;
 }
 
-- (void)initializeWithParameters:(nonnull id<MAAdapterInitializationParameters>)parameters withCompletionHandler:(nonnull void (^)(void))completionHandler { 
-    [self log: @"Initializing Tappx adapter... "];
+- (void)initializeWithParameters:(nonnull id<MAAdapterInitializationParameters>)parameters withCompletionHandler:(nonnull void (^)(void))completionHandler {
     
-    NSString *appKey = [parameters.serverParameters al_stringForKey: @"app_id"];
-    NSDictionary *customParameters = parameters.customParameters;
-
-    if ( [parameters isTesting] || [customParameters al_boolForKey: @"is_testing"] || [customParameters al_boolForKey: @"test" ] )
-    {
-        [TappxFramework addTappxKey: appKey testMode: YES];
-    }
-    else
-    {
-        [TappxFramework addTappxKey: appKey fromNonNative:@"applovin"];
-    }
+    self.isTappxSDKInitialized = NO;
     
-    NSString *endpoint = [parameters.serverParameters al_stringForKey: @"endpoint"];
-    if ( [endpoint al_isValidString] )
-    {
-        [TappxFramework setEndpoint: endpoint];
-    }
+    [self initializeTappxWithParameters:parameters.serverParameters
+                       customParameters:parameters.customParameters
+                              isTesting:parameters.isTesting];
     
     completionHandler();
 }
@@ -130,6 +109,10 @@
 
 - (void)loadInterstitialAdForParameters:(id<MAAdapterResponseParameters>)parameters andNotify:(id<MAInterstitialAdapterDelegate>)delegate
 {
+    [self initializeTappxWithParameters:parameters.serverParameters
+                       customParameters:parameters.customParameters
+                              isTesting:parameters.isTesting];
+    
     [self log: @"Loading interstitial ad..."];
     
     self.interstitialAdDelegate = [[AppLovinTappxInterstitialDelegate alloc] initWithParentAdapter:self andNotify:delegate];
@@ -164,6 +147,10 @@
 
 - (void)loadAdViewAdForParameters:(id<MAAdapterResponseParameters>)parameters adFormat:(MAAdFormat *)adFormat andNotify:(id<MAAdViewAdapterDelegate>)delegate
 {
+    [self initializeTappxWithParameters:parameters.serverParameters
+                       customParameters:parameters.customParameters
+                              isTesting:parameters.isTesting];
+    
     [self log: @"Loading %@ ad view ad...", adFormat.label];
     
     self.adViewAdDelegate = [[AppLovinTappxAdViewDelegate alloc] initWithParentAdapter:self andNotify: delegate];
@@ -183,6 +170,10 @@
 #pragma mark - MARewarded Methods
 
 - (void)loadRewardedAdForParameters:(nonnull id<MAAdapterResponseParameters>)parameters andNotify:(nonnull id<MARewardedAdapterDelegate>)delegate {
+    [self initializeTappxWithParameters:parameters.serverParameters
+                       customParameters:parameters.customParameters
+                              isTesting:parameters.isTesting];
+    
     [self log: @"Loading rewarded ad..."];
     
     self.rewardedAdDelegate = [[AppLovinTappxRewardedDelegate alloc] initWithParentAdapter: self andNotify: delegate];
@@ -218,6 +209,8 @@
 {
     TappxErrorCode tappxErrorCode = tappxAdError.code;
     MAAdapterError *adapterError = MAAdapterError.unspecified;
+    NSError *nsError = [NSError errorWithDomain:tappxAdError.domain code:tappxErrorCode userInfo:tappxAdError.userInfo];
+    
     switch ( tappxErrorCode )
     {
         case VIEW_INCONSISTENCY_ERROR: NS_FALLTHROUGH;
@@ -235,6 +228,9 @@
             break;
         case SERVER_ERROR:
             adapterError = MAAdapterError.serverError;
+            break;
+        case BIDDING_AD_ERROR:
+            adapterError = [MAAdapterError errorWithNSError:nsError];
             break;
     }
     
@@ -261,6 +257,33 @@
     {
         [NSException raise: NSInvalidArgumentException format: @"Invalid ad format: %@", adFormat];
         return TappxBannerSize320x50;
+    }
+}
+
+- (void)initializeTappxWithParameters:(NSDictionary<NSString *, id> *)serverParameters
+                     customParameters:(NSDictionary<NSString *, id> *)customParameters
+                            isTesting:(BOOL)isTesting {
+    if (self.isTappxSDKInitialized == YES) {
+        return;
+    }
+    
+    [self log: @"Initializing Tappx adapter... "];
+    
+    NSString *appKey = [serverParameters al_stringForKey: @"app_id"];
+    
+    if (isTesting || [customParameters al_boolForKey: @"is_testing"] || [customParameters al_boolForKey: @"test" ] ) {
+        [TappxFramework addTappxKey: appKey testMode: YES];
+    } else {
+        [TappxFramework addTappxKey: appKey fromNonNative: @"applovin"];
+    }
+    
+    NSString *endpoint = [customParameters al_stringForKey: @"endpoint"];
+    if ( [endpoint al_isValidString] ) {
+        [TappxFramework setEndpoint: endpoint];
+    }
+    
+    if (appKey && endpoint) {
+        self.isTappxSDKInitialized = YES;
     }
 }
 

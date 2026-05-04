@@ -7,5 +7,4 @@ framework module TappxFramework {
 
 module TappxFramework.Swift {
   header "TappxFramework-Swift.h"
-  requires objc
 }
