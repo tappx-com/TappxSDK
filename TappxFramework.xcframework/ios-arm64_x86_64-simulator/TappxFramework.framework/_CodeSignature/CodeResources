@@ -58,7 +58,7 @@
 		</data>
 		<key>Headers/TappxFramework.h</key>
 		<data>
-		XjLCxeRz2mEouZiA/Wz/oVq6El8=
+		oXkbbqkMkBJpTaBEjqPiG0rxaBU=
 		</data>
 		<key>Headers/TappxInterstitialAd.h</key>
 		<data>
@@ -102,7 +102,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		kbcriSXSiFzVsc+o0LFFYqbd6UM=
+		fvGytTJeQ6pq/ATcPvdQpCyhGqw=
 		</data>
 		<key>Modules/TappxFramework.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -122,7 +122,7 @@
 		</data>
 		<key>Modules/TappxFramework.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		JT35G66CltvpFMcpTZDJeZbmR80=
+		WnnAOe4gUTsuijouTaFgyLWQTMA=
 		</data>
 		<key>Modules/TappxFramework.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -142,7 +142,7 @@
 		</data>
 		<key>Modules/TappxFramework.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		4p1fnQztZtAgmqneaLAg8At7XJs=
+		G3f2kxJAiNZ2u0w9ewpdBOCz4E4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -150,7 +150,7 @@
 		</data>
 		<key>PrivacyInfo.xcprivacy</key>
 		<data>
-		j9VGKRe8w1NLTOQggvpdbSnU648=
+		fzRPHeNsjZGUdrAieeetsEo8jZA=
 		</data>
 		<key>mraid.js</key>
 		<data>
@@ -162,7 +162,7 @@
 		</data>
 		<key>omsdk-v1.js</key>
 		<data>
-		flu49ep64Khw2EbOD2LgY0HvggU=
+		2E8Blv5Bi6PE/U2L9O+oFijyaEA=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -262,7 +262,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GjmjRXI43aDGDsGbE2M2/xOKjNV3drHoSUL1mdpOCXQ=
+			HpNmZOckcL1n2dWUjd/wBKWzoruM4pAxsE643L5XSnY=
 			</data>
 		</dict>
 		<key>Headers/TappxInterstitialAd.h</key>
@@ -367,7 +367,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fZGZ+DmWBvcsieEstqi296AdXZZm9ifsJK5Pn1EvKKc=
+			bhqsWoXkizufgTAxp0emcnD46bQFVHCs3Q0HUGHnyLY=
 			</data>
 		</dict>
 		<key>Modules/TappxFramework.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -402,7 +402,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			dr5RYQyedkHg6lt1h4QvHQz1UI/JlpfT9ebiZRlhKpE=
+			bg9eNF6CwwOU7yosWlx2Snp6FBvQfbzlwF8fFFGNzcc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -416,7 +416,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			odc5Ri7xhJB1sFyrkDPqMJxmcSfwx4hYQntbzDb3pBM=
+			uNhfHm2N4+Qa1qTOficjwSgFef/KHnG28yOcCNm9gcY=
 			</data>
 		</dict>
 		<key>mraid.js</key>
@@ -437,7 +437,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			G1LHyLNuDHSaD5mEUR5IsplsQjnmPNPlEIO1xrVB3zE=
+			9R8YPou5bqavy8yl3YP9ntL1qezjn+oUFThOC0FO1y4=
 			</data>
 		</dict>
 	</dict>
